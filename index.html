@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Portfólio Ivan</title>
+
+</head>
+
+<body>
+    <i class="bi bi-list menu-mobile"></i>
+    <aside id="header">
+        <section class="profile">
+            <img src="static/img/imageTop2.png" alt="foto ivan">
+            <h1>Ivan Suiyama Silva</h1>
+            <div class="social-links mt-4 text-center">
+                <a target="_blank" href="https://github.com/IvanSuiyama">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/ivan-suiyama-silva-248042186/">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
+        </section>
+
+        <nav id="navbar" class="nav-menu">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#inicio"><i class="bi bi-house"></i> Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre"><i class="bi bi-person"></i> Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#habilidades"><i class="bi bi-list-check"></i> Habilidades e Currículo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portifolio"><i class="bi bi-collection"></i> Portfólio</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main id="main">
+        <section id="inicio" class="row m-0 p-0">
+            <div class="col-md-7 hero-text d-flex justify-content-center align-items-center flex-column ">
+
+                <h2 class="text-white text-shadow">Ivan<br>Suiyama<br>Silva</h2>
+                <span id="subtitle" class="text-white text-shadow">**Desenvolvedor Web Full Stack**</span>
+            </div>
+            <div class="col-md-5 d-flex justify-content-end align-items-end">
+                <div id="arraste" class="d-flex align-items-center">
+                    <a href="mailto:ivan.silva5@aluno.cps.sp.gov.br" id="email-copy"
+                        data-email="ivan.silva5@aluno.cps.sp.gov.br"
+                        title="Clique para copiar">ivan.silva5@aluno.cps.sp.gov.br</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="mt-5" id="sobre">
+            <div class="sobre-stack">
+                <div class="card sobre-card sobre-card-small slide-up">
+                    <div class="card-body">
+                        <p class="sobre-kicker mb-0">
+                            Estudante de Desenvolvimento de Software Multiplataforma (DSM) FATEC - 6° Semestre
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card sobre-card slide-up">
+                    <div class="card-body">
+                        <h2>Sobre</h2>
+                        <p class="mb-0" id="sobre-text">
+                            Desde sempre gosto de programar em Python e busco constantemente aprender novas
+                            tecnologias. Tenho mais afinidade com o backend, mas também sou capaz de
+                            desenvolver um ótimo frontend, o que me permite atuar de ponta a ponta nos
+                            projetos. Valorizo código limpo, boas práticas de desenvolvimento e soluções que
+                            resolvam problemas reais. Atualmente trabalho como desenvolvedor full stack e
+                            direciono meus estudos a novas tecnologias e a modelos de IA.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card sobre-card slide-up">
+                    <div class="card-body">
+                        <h3>Objetivo</h3>
+                        <p class="mb-0">
+                            Meu objetivo é atuar como Desenvolvedor Web Full Stack, construindo aplicações
+                            completas — do backend ao frontend — com foco em código limpo, segurança e boa
+                            experiência para o usuário. Ao longo da graduação em Desenvolvimento de Software
+                            Multiplataforma, busco evoluir continuamente por meio de projetos reais e me
+                            preparar para o mercado, unindo desenvolvimento web e boas práticas de segurança.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5 section-bg" id="habilidades">
+            <div class="container pb-5">
+                <h2 class="pt-5 text-center">Habilidades</h2>
+
+                <div class="skill-legend mb-4">
+                    <span>
+                        <span class="skill-level">
+                            <i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i>
+                        </span>
+                        sei fazer sozinho
+                    </span>
+                    <span>
+                        <span class="skill-level">
+                            <i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i>
+                        </span>
+                        sei fazer com ajuda
+                    </span>
+                    <span>
+                        <span class="skill-level">
+                            <i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i><i class="bi bi-circle"></i>
+                        </span>
+                        ouvi falar
+                    </span>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 d-flex">
+                        <div class="card skill-card h-100 w-100 slide-up">
+                            <div class="card-body">
+                                <h3>Backend</h3>
+                                <ul class="skill-list">
+                                    <li><span>Python</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>FastAPI</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>Flask</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>Node.js</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>Java</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
+                                    <li><span>Spring Boot</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 d-flex">
+                        <div class="card skill-card h-100 w-100 slide-up">
+                            <div class="card-body">
+                                <h3>Frontend</h3>
+                                <ul class="skill-list">
+                                    <li><span>HTML</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>CSS</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>React</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>React Native</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>Flutter</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
+                                    <li><span>Bootstrap</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
+                                    <li><span>Tailwind</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 d-flex">
+                        <div class="card skill-card h-100 w-100 slide-up">
+                            <div class="card-body">
+                                <h3>Banco de Dados</h3>
+                                <ul class="skill-list">
+                                    <li><span>SQL</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>MySQL</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>PostgreSQL</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>SQLite</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>Redis</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
+                                    <li><span>MongoDB</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
+                                    <li><span>MariaDB</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i><i class="bi bi-circle"></i></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 d-flex">
+                        <div class="card skill-card h-100 w-100 slide-up">
+                            <div class="card-body">
+                                <h3>Adicionais</h3>
+                                <ul class="skill-list">
+                                    <li><span>Linux</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>Docker</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>Bash</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>LGPD</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
+                                    <li><span>Regex</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
+                                    <li><span>Orange Data Mining</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5 cv" id="curriculo">
+            <div class="container pb-5">
+                <h2 class="pt-3 pb-4">Currículo</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="cv-title">Educação</h3>
+                        <div class="cv-item">
+                            <h4>Tecnólogo em Desenvolvimento de Software Multiplataforma</h4>
+                            <h5>2023 - Atual</h5>
+                            <p><em>Faculdade de Tecnologia FATEC Prof Jessen Vidal</em></p>
+                            <p>Tecnólogo voltado a aprender a aprender, com as linguagens, python, React, React-Native,
+                                Java, Typescript, NodeJs
+                                entre outras, visando a criação de sites, sistemas web e aplicativos mobile, com duração
+                                de 6 semestres
+                            </p>
+                        </div>
+                        <div class="cv-item">
+                            <h4>Tecnólogo em Manufatura Avançada</h4>
+                            <h5>2019 - 2021</h5>
+                            <p><em>Faculdade de Tecnologia FATEC Prof Jessen Vidal</em></p>
+                            <p>Tecnólogo voltado a automação e inovação, com metodologias ágeis como Scrum,
+                                com projetos integrados que forçam o aprendizado em todas
+                                as matérias do semestre.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="cv-title">Profissional</h3>
+                        <div class="cv-item">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4>Estágio - Desenvolvedor de Software</h4>
+                                    <h5>05/2026 - Atualmente</h5>
+                                    <p><em>Play Educacional</em></p>
+                                    <p>Responsável pelo desenvolvimento de sistemas internos, execução de manutenções
+                                        corretivas e evolutivas em aplicações web, além do gerenciamento e administração
+                                        de servidores VPS, garantindo a disponibilidade e o desempenho das soluções implantadas.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portifolio" class="section-bg mt-5">
+            <div class="container pb-5 pt-5">
+                <h2 class="pb-4">Portfólio</h2>
+
+                <div class="container">
+
+                    <!-- Linha 1: App de Tarefas + Baixador de Músicas -->
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+                        <div class="col">
+                            <div class="card h-100 slide-up portfolio-card" data-delay="0">
+                                <div class="card-img-top"
+                                    style="width:100%; height:250px; min-height:250px; display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:2px; background:#000; overflow:hidden;">
+                                    <div class="app-screenshot-container">
+                                        <img src="static/img/app1.jpeg" alt="App screenshot 1">
+                                    </div>
+                                    <div class="app-screenshot-container">
+                                        <img src="static/img/app2.jpeg" alt="App screenshot 2">
+                                    </div>
+                                    <div class="app-screenshot-container">
+                                        <img src="static/img/app3.jpeg" alt="App screenshot 3">
+                                    </div>
+                                    <div class="app-screenshot-container">
+                                        <img src="static/img/app5.jpeg" alt="App screenshot 5">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Aplicativo de Gerenciamento e Compartilhamento de Tarefas</h5>
+                                    <p class="card-text">Aplicativo de compartilhamento de tarefas desenvolvido para
+                                        facilitar a organização individual e em equipe, com funções avançadas para quem
+                                        busca um app completo.</p>
+                                    <div>
+                                        <h3 class="subtitle-card">Colaborações pessoais no projeto</h3>
+                                        <p class="text-card-porti">Desenvolvido inteiramente por mim. Destaques: criação
+                                            de tarefa por voz com IA, cache offline, login com Google, loja de temas e
+                                            avatares como recompensa por tarefas concluídas.</p>
+                                        <h3 class="subtitle-card">Tecnologias utilizadas</h3>
+                                        <p class="text-card-porti">NodeJs, React-Native, Módulos nativos em Java</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="https://github.com/IvanSuiyama/Noiton2.0" target="_blank"
+                                            class="btn btn-outline-primary">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card h-100 slide-up portfolio-card" data-delay="0.1">
+                                <img src="static/img/baixador.jpeg" class="card-img-top"
+                                    alt="Baixador de Músicas Android"
+                                    style="object-fit:cover; width:100%; height:250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Baixador de Músicas Android</h5>
+                                    <p class="card-text">Aplicativo Android desenvolvido inteiramente em Python com
+                                        Kivy. Baixa áudio do YouTube e salva na pasta Music do dispositivo.</p>
+                                    <div>
+                                        <h3 class="subtitle-card">Destaques técnicos</h3>
+                                        <p class="text-card-porti">Contorna as restrições de armazenamento do Android
+                                            10+ usando a MediaStore API via chamadas Java nativas através do jnius.
+                                            Interface no tema hacker com fundo preto e letras verdes.</p>
+                                        <h3 class="subtitle-card">Tecnologias utilizadas</h3>
+                                        <p class="text-card-porti">Python, Kivy, yt-dlp, Buildozer, jnius</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <a href="https://github.com/IvanSuiyama/music-downloader-android"
+                                            target="_blank" class="btn btn-outline-primary">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- fim linha 1 -->
+
+                    <!-- Linha 2: Veredito -->
+                    <div class="row row-cols-1 row-cols-md-2 g-4 mt-4 justify-content-center">
+
+                        <!-- Veredito -->
+                        <div class="col">
+                            <div class="card h-100 slide-up portfolio-card" data-delay="0.3">
+                                <div class="card-img-top"
+                                    style="width:100%; height:250px; min-height:250px; display:grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap:2px; background:#000; overflow:hidden;">
+                                    <div class="app-screenshot-container">
+                                        <img src="static/img/tela1.png" alt="Veredito tela inicial" style="cursor:pointer;"
+                                            onclick="window.open(this.src)">
+                                    </div>
+                                    <div class="app-screenshot-container">
+                                        <img src="static/img/tela2.png" alt="Veredito análise de petição" style="cursor:pointer;"
+                                            onclick="window.open(this.src)">
+                                    </div>
+                                    <div class="app-screenshot-container">
+                                        <img src="static/img/tela3.png" alt="Veredito histórico" style="cursor:pointer;"
+                                            onclick="window.open(this.src)">
+                                    </div>
+                                    <div class="app-screenshot-container">
+                                        <img src="static/img/tela4.png" alt="Veredito nova análise" style="cursor:pointer;"
+                                            onclick="window.open(this.src)">
+                                    </div>
+                                    <div class="app-screenshot-container">
+                                        <img src="static/img/tela6.png" alt="Veredito dados do caso" style="cursor:pointer;"
+                                            onclick="window.open(this.src)">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Aplicação Mobile para Auxiliar Juízes e Advogados</h5>
+                                    <p class="card-text">Busca de precedentes jurídicos, geração de minuta de processos e
+                                        extração de informações relevantes de documentos jurídicos com o auxílio de inteligência
+                                        artificial.</p>
+                                    <div>
+                                        <h3 class="subtitle-card">Sobre o projeto</h3>
+                                        <p class="text-card-porti">Desenvolvido para o API do 5° semestre da FATEC, com o
+                                            objetivo de auxiliar juízes e advogados no dia a dia jurídico. O foco foi a
+                                            utilização de IA generativa para processar documentos, gerar resumos automáticos,
+                                            indicar petições relacionadas e comparar embeddings para encontrar precedentes com
+                                            alta similaridade semântica.</p>
+                                        <h3 class="subtitle-card">Colaborações pessoais no projeto</h3>
+                                        <p class="text-card-porti">Atuei fortemente tanto no backend quanto no frontend.
+                                            Destaque para a implementação de <strong>streaming via protocolo SSE
+                                            (Server-Sent Events)</strong> — técnica que permite exibir as respostas da IA
+                                            progressivamente, conforme os dados são gerados, eliminando a necessidade do
+                                            usuário aguardar o processamento completo para começar a visualizar as informações
+                                            na tela. Também fui responsável pelo desenvolvimento do histórico de petições.</p>
+                                        <h3 class="subtitle-card">Tecnologias utilizadas</h3>
+                                        <p class="text-card-porti">Flutter, Nest js, IA Generativa</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="https://github.com/SkyFlyTeam/veredito-documentation" target="_blank"
+                                            class="btn btn-outline-primary">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- fim linha 2 -->
+
+                   <!-- Linha 3: Estação Meteorológica + Portal de Transparência -->
+                    <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+
+                        <div class="col">
+                            <div class="card h-100 slide-up portfolio-card" data-delay="0.4">
+                                <img src="static/img/photo_Estacao.png" class="card-img-top"
+                                    alt="Sistema de controle para estação meteorológica"
+                                    style="object-fit:cover; object-position: left center; width:100%; height:250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sistema de Controle para Estação Meteorológica</h5>
+                                    <p class="card-text">Sistema desenvolvido no API no 4° semestre da Fatec, projetado para controlar diversas estações
+                                        meteorológicas. Monitore o clima em tempo real com tecnologia e precisão.</p>
+                                    <div>
+                                        <h3 class="subtitle-card">Colaborações pessoais no projeto</h3>
+                                        <p class="text-card-porti">Responsável por toda a integração dos dados das
+                                            estações e pelo desenvolvimento da parte física, montada com ESP32 e sensores
+                                            de luminosidade, temperatura, umidade e pluviômetro.</p>
+                                        <h3 class="subtitle-card">Tecnologias utilizadas</h3>
+                                        <p class="text-card-porti">Python, FastAPI, React, VSCode</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="https://github.com/TeamHiveAPI/API-2025.01" target="_blank"
+                                            class="btn btn-outline-primary">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card h-100 slide-up portfolio-card" data-delay="0.5">
+                                <img src="static/img/portal.png" class="card-img-top" alt="Portal de transparência"
+                                    style="object-fit:cover; width:100%; height:250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Portal de Transparência</h5>
+                                    <p class="card-text">Sistema desenvolvido no API no 3° semestre da Fatec, para suprir as necessidades da fundação
+                                        FAPG, com transparência dos projetos para fiscalização e curiosidade do público
+                                        em geral.</p>
+                                    <div>
+                                        <h3 class="subtitle-card">Colaborações pessoais no projeto</h3>
+                                        <p class="text-card-porti">Responsável por todo o ciclo de cadastros de projetos
+                                            e bolsistas: cadastro, edição, exclusão, ocultar campos e autenticação.</p>
+                                        <h3 class="subtitle-card">Tecnologias utilizadas</h3>
+                                        <p class="text-card-porti">TypeScript, React, Java, SpringBoot</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="https://github.com/Code-Nine-FTC/API-2024.2" target="_blank"
+                                            class="btn btn-outline-primary">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- fim linha 3 -->
+
+                    <!-- Linha 4: Sistema de Chamados + Banco C3 -->
+                    <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+
+                        <div class="col">
+                            <div class="card h-100 slide-up portfolio-card" data-delay="0.6">
+                                <img src="static/img/foto-api2.jpg" class="card-img-top"
+                                    alt="Sistema de Gerenciamento de Chamados"
+                                    style="object-fit:cover; width:100%; height:250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sistema de Gerenciamento de Chamados</h5>
+                                    <p class="card-text">Sistema desenvolvido no API no 2° semestre da Fatec, para gerenciar chamados com funcionalidades
+                                        práticas para suporte, administrador e clientes.</p>
+                                    <div>
+                                        <h3 class="subtitle-card">Colaborações pessoais no projeto</h3>
+                                        <p class="text-card-porti">Desenvolvimento do backend, funções e classes, banco
+                                            de dados, recuperação de senha e envio de e-mail.</p>
+                                        <h3 class="subtitle-card">Tecnologias utilizadas</h3>
+                                        <p class="text-card-porti">TypeScript, React, MySQL, JavaScript</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="https://github.com/CoddingWarriors/Api_CoddingWarriors" target="_blank"
+                                            class="btn btn-outline-primary">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card h-100 slide-up portfolio-card" data-delay="0.7">
+                                <img src="static/img/imagemC3.png" class="card-img-top"
+                                    alt="Internet Banking Simulado C3"
+                                    style="object-fit:cover; object-position: center; width:100%; height:250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Internet Banking Simulado C3</h5>
+                                    <p class="card-text">Sistema desenvolvido no 1° Semestre no API da FATEC, com o intuito de
+                                        simular um internet banking com funções de extrato, saque, depósito, entre outras.</p>
+                                    <div>
+                                        <h3 class="subtitle-card">Colaborações pessoais no projeto</h3>
+                                        <p class="text-card-porti">Atuei como suporte no projeto, auxiliando e corrigindo funções
+                                            menores tanto no backend quanto no frontend, contribuindo para a estabilidade e
+                                            funcionamento geral da aplicação.</p>
+                                        <h3 class="subtitle-card">Tecnologias utilizadas</h3>
+                                        <p class="text-card-porti">Python, Flask, Sass, Mysql</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="https://github.com/c3fatec/c3fatec.github.io" target="_blank"
+                                            class="btn btn-outline-primary">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- fim linha 4 -->
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="static/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="static/script.js"></script>
+</body>
+
+</html>

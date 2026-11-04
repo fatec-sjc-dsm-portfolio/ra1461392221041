@@ -1,0 +1,801 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --background-primary: #0d1117;
+    --background-secondary: #161b22;
+    --highlight: #58a6ff;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html, body{
+    font-family: Ubuntu, Arial;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: var(--background-secondary);
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 300px;
+    transition: all ease-in-out 0.5s;
+    padding: 0 15px;
+    z-index: 9997;
+}
+
+#header .profile img{
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+    height: 120px;
+    border: 8px solid #2c2f3f;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#header .profile h1{
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+#header .profile .social-links a{
+    font-size: 1rem;
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
+    padding: 0.6rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+#header .profile .social-links a:hover{
+    background: var(--highlight);
+}
+
+/* Alterar a cor da borda dos ícones de GitHub e LinkedIn */
+#header .profile .social-links a {
+    border: 2px solid #4ea8de; /* Azul mais claro */
+}
+
+#header .profile .social-links a:hover {
+    border-color: #58a6ff; /* Azul de destaque no hover */
+}
+
+.nav-menu{
+    padding: 1.5rem 1rem;
+}
+
+.nav-menu a, .nav-menu a:focus{
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.nav-menu a i, .nav-menu a:focus i{
+    font-size: 24px;
+    padding-right: 0.8rem;
+    color: #6f7180;
+}
+
+.nav-menu a:hover, 
+.nav-menu .active, 
+.nav-menu .active:focus, 
+.nav-menu li:hover > a{
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.nav-menu a:hover i, 
+.nav-menu .active i, 
+.nav-menu .active:focus i, 
+.nav-menu li:hover > a i{
+    color: var(--highlight);
+}
+
+#main{
+    margin-left: 300px;
+}
+
+section#inicio {
+    background-image: url("./img/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right;
+    width: 100%;
+    height: 100vh;
+}
+
+section#inicio h2{
+    font-family: "Courier New", Courier, monospace;
+    font-size: clamp(2.5rem, 4.5vw, 5rem);
+    line-height: 1.2;
+    text-align: left;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    padding: 0 1.5rem;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+section#inicio .hero-text{
+    align-items: flex-start !important;
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu-nav-active section#inicio .hero-text{
+    transform: translateX(300px);
+}
+
+section#inicio span#subtitle{
+    margin-right: 0;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    text-align: left;
+    padding: 0 1.5rem;
+}
+
+.text-shadow {
+    text-shadow: 4px 4px 10px #000000;
+}
+
+section#inicio div#arraste {
+    width: auto;
+    max-width: 100%;
+    justify-content: flex-end;
+    text-align: right;
+    font-size: clamp(0.72rem, 2.5vw, 0.95rem);
+    padding: 0 3px 17px 0;
+}
+
+section#inicio div#arraste a{
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+section#inicio div#arraste a:hover{
+    color: var(--highlight);
+}
+
+i.menu-mobile{
+    position: fixed;
+    color: #fff;
+    background-color: var(--background-secondary);
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-nav-active{
+    overflow: hidden;
+}
+
+.menu-nav-active #header{
+    left: 0;
+}
+
+@media (max-width: 1024px){
+    #header{
+        left: -300px;
+    }
+    i.menu-mobile{
+        display: flex;
+    }
+    section#inicio{
+        background-attachment: scroll;
+        background-position: center;
+    }
+    section#inicio h2{
+        font-size: clamp(2.5rem, 5.5vw, 4rem);
+    }
+    section#inicio span#subtitle{
+        margin-right: 0;
+        font-size: clamp(0.95rem, 1.6vw, 1.25rem);
+    }
+    #main{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 767px){
+    section#inicio h2{
+        font-size: clamp(2.5rem, 9vw, 4rem);
+    }
+    section#inicio span#subtitle{
+        font-size: clamp(1rem, 4vw, 1.25rem);
+    }
+}
+
+@media (max-width: 400px){
+    section#inicio span#subtitle{
+        font-size: 0.85rem;
+    }
+}
+
+*::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+}
+
+*::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: #30363d;
+    border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover{
+    background-color: #484f58;
+}
+
+html{
+    scrollbar-width: thin;
+    scrollbar-color: #30363d transparent;
+}
+
+.section-bg{
+    background-color: var(--background-secondary);
+}
+
+.cv .cv-title{
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.cv .cv-item{
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid var(--highlight);
+    position: relative;
+}
+
+.cv .cv-item h4 {
+    line-height: 1.4;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.cv .cv-item h5 {
+    background-color: var(--background-secondary);
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.cv .cv-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -9px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--highlight);
+    background-color: var(--background-primary);
+    border-radius: 50%;
+}
+
+.subtitle-card{
+    font-size: 20px;
+}
+
+.text-card-porti{
+    font-size: 15px;
+}
+
+/* ===== ESTILOS DO FORMULÁRIO DE CONTATO ===== */
+
+/* Mensagem de status (sucesso/erro) */
+.status-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    display: none;
+    animation: slideDown 0.3s ease;
+}
+
+.status-message.show {
+    display: block;
+}
+
+.status-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Animação para a mensagem de status */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botão de envio desabilitado */
+.btn-enviar:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Estilo para o card de informações */
+#contato .info {
+    margin-top: 1rem;
+}
+
+#contato .info p {
+    font-size: 0.95rem;
+}
+
+/* Responsividade do formulário */
+@media (max-width: 768px) {
+    #contato .card {
+        padding: 2rem !important;
+    }
+}
+
+/* Estilos para as imagens do app no portfólio */
+.app-screenshot-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Desktop: mostrar imagens inteiras sem zoom */
+@media (min-width: 768px) {
+    .app-screenshot-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        clip-path: inset(1.5% 0 1.5% 0);
+    }
+}
+
+/* Mobile: cortar barras superior e inferior */
+@media (max-width: 767px) {
+    .app-screenshot-container img {
+        position: absolute;
+        top: -8%;
+        left: 0;
+        width: 100%;
+        height: 116%;
+        object-fit: cover;
+    }
+}
+
+/* ===== ANIMAÇÕES ===== */
+
+/* Fade in - aparecer gradualmente */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+/* Slide up - deslizar de baixo para cima */
+.slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Zoom in - efeito de zoom na imagem */
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.zoom-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Barras de progresso - começa zeradas */
+.progress-bar {
+    width: 0 !important;
+    transition: width 1.5s ease-out;
+}
+
+.progress-bar.animate {
+    width: var(--target-width) !important;
+}
+
+/* Timeline do currículo - linha animada */
+.cv .cv-item {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.cv .cv-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Efeito de digitação */
+.typewriter {
+    display: inline;
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: rgba(0, 0, 0, 0.75);
+    margin-left: 2px;
+    animation: blink-caret 0.75s step-end infinite;
+    vertical-align: middle;
+}
+
+@keyframes blink-caret {
+    from, to {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.typewriter.finished .typewriter-cursor {
+    display: none;
+}
+
+/* Modal de imagem */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    overflow: auto;
+}
+
+.image-modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content-image {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+}
+
+.modal-content-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10001;
+    transition: 0.3s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+}
+
+/* Cursor pointer nas imagens clicáveis */
+.clickable-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.clickable-image:hover {
+    transform: scale(1.05);
+}
+
+/* Animações no formulário de contato */
+#contato .form-control:focus {
+    border-color: #149ddd;
+    box-shadow: 0 0 0 0.2rem rgba(20, 157, 221, 0.25);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+#contato .btn-enviar {
+    transition: all 0.3s ease;
+}
+
+#contato .btn-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(20, 157, 221, 0.3);
+}
+
+#contato .btn-enviar:active {
+    transform: translateY(0);
+}
+
+/* Animação suave para inputs */
+#contato .form-control {
+    transition: all 0.3s ease;
+}
+
+/* Cards do portfólio com delays */
+.portfolio-card {
+    transition-delay: 0s;
+}
+
+/* Ajustes para seções com fundo branco */
+#sobre, #curriculo {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+}
+
+#curriculo .cv-item h5 {
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
+}
+
+#curriculo .cv-item {
+    border-left: 2px solid var(--highlight);
+}
+
+/* Ajuste para fundo e texto das informações do 'Sobre' */
+#sobre .list-group-item {
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
+}
+
+/* Cards da seção Sobre */
+#sobre .sobre-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+#sobre .sobre-card {
+    background: linear-gradient(145deg, #1a2029, #12171f);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    color: var(--text-primary);
+    width: 100%;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.5),
+        0 14px 30px rgba(0, 0, 0, 0.45);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#sobre .sobre-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.10),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.5),
+        0 18px 38px rgba(0, 0, 0, 0.55);
+}
+
+#sobre .sobre-card .card-body {
+    padding: 0.9rem 1.1rem;
+}
+
+
+/* Ajuste para fundo do currículo */
+#curriculo {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+}
+
+/* Ajuste para os cards do portfólio */
+.portfolio-card {
+    background-color: #1e242e; /* Cinza escuro mais claro */
+    color: var(--text-primary);
+    border: 1px solid var(--background-secondary);
+    transition: background-color 0.1s ease, box-shadow 0.1s ease; /* Reduzir o tempo de transição */
+}
+
+.portfolio-card:hover {
+    background-color: var(--background-secondary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Fundo da div externa ao formulário na seção de contato */
+#contato .card {
+    background-color: var(--background-primary);
+}
+
+/* Cor do botão de envio para verde */
+#contato .btn-enviar {
+    background-color: #28a745; /* Verde */
+    border-color: #28a745;
+}
+
+#contato .btn-enviar:hover {
+    background-color: #218838; /* Verde mais escuro no hover */
+    border-color: #1e7e34;
+}
+
+/* Garantir que o texto na div externa ao formulário seja branco */
+#contato .card {
+    color: var(--text-primary);
+}
+
+/* Destacar a borda do card na seção de contato */
+#contato .card {
+    border: 2px solid var(--highlight); /* Borda mais visível com a cor de destaque */
+}
+
+
+
+
+/* ===== HABILIDADES — CARDS ===== */
+#habilidades .skill-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem 2rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+#habilidades .skill-legend > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#habilidades .skill-level {
+    display: inline-flex;
+    gap: 0.2rem;
+}
+
+#habilidades .skill-level i {
+    font-size: 0.9rem;
+    color: #8b949e;
+}
+
+#habilidades .skill-level i.bi-circle {
+    color: #30363d;
+}
+
+#habilidades .skill-card {
+    background: linear-gradient(145deg, #1a2029, #12171f);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    color: var(--text-primary);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.5),
+        0 14px 30px rgba(0, 0, 0, 0.45);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#habilidades .skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.10),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.5),
+        0 18px 38px rgba(0, 0, 0, 0.55);
+}
+
+#habilidades .skill-card .card-body {
+    padding: 1.25rem 1.35rem;
+}
+
+#habilidades .skill-card h3 {
+    margin-bottom: 0.75rem;
+}
+
+#habilidades .skill-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#habilidades .skill-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#habilidades .skill-list li:first-child {
+    padding-top: 0;
+}
+
+#habilidades .skill-list li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    #habilidades .skill-legend {
+        justify-content: center;
+    }
+}
+
+/* Linha de formação acima do "Sobre" */
+#sobre .sobre-kicker {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+/* Card pequeno com a formação */
+#sobre .sobre-card-small .card-body {
+    padding: 0.7rem 1.1rem;
+}

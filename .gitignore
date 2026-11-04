@@ -1,0 +1,26 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs e temporários
+*.log
+*.tmp
+
+# Planejamento local (não publicar)
+/Plano.md
+
+# Documento de orientações (não publicar)
+/orientacoes_portfolio_dsm_2026_02.pdf
+
+# Ambientes virtuais e caches Python (caso volte a usar scripts)
+.venv/
+venv/
+__pycache__/
+*.pyc
