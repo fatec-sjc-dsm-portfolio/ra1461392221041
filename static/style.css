@@ -271,21 +271,21 @@ html{
     background-color: var(--background-secondary);
 }
 
-.cv .cv-title{
+.trajetoria .trajetoria-title{
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 20px;
     color: var(--text-primary);
 }
 
-.cv .cv-item{
+.trajetoria .trajetoria-item{
     padding: 0 0 20px 20px;
     margin-top: -2px;
     border-left: 2px solid var(--highlight);
     position: relative;
 }
 
-.cv .cv-item h4 {
+.trajetoria .trajetoria-item h4 {
     line-height: 1.4;
     font-weight: 600;
     text-transform: uppercase;
@@ -295,7 +295,7 @@ html{
     letter-spacing: 1px;
 }
 
-.cv .cv-item h5 {
+.trajetoria .trajetoria-item h5 {
     background-color: var(--background-secondary);
     padding: 5px 15px;
     display: inline-block;
@@ -303,7 +303,7 @@ html{
     margin-bottom: 10px;
 }
 
-.cv .cv-item::before{
+.trajetoria .trajetoria-item::before{
     content: "";
     position: absolute;
     top: 0;
@@ -463,14 +463,14 @@ html{
     width: var(--target-width) !important;
 }
 
-/* Timeline do currículo - linha animada */
-.cv .cv-item {
+/* Timeline do trajetória - linha animada */
+.trajetoria .trajetoria-item {
     opacity: 0;
     transform: translateX(-30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.cv .cv-item.visible {
+.trajetoria .trajetoria-item.visible {
     opacity: 1;
     transform: translateX(0);
 }
@@ -594,17 +594,17 @@ html{
 }
 
 /* Ajustes para seções com fundo branco */
-#sobre, #curriculo {
+#sobre, #trajetoria {
     background-color: var(--background-primary);
     color: var(--text-primary);
 }
 
-#curriculo .cv-item h5 {
+#trajetoria .trajetoria-item h5 {
     background-color: var(--background-secondary);
     color: var(--text-primary);
 }
 
-#curriculo .cv-item {
+#trajetoria .trajetoria-item {
     border-left: 2px solid var(--highlight);
 }
 
@@ -618,7 +618,7 @@ html{
 #sobre .sobre-stack {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 10px;
@@ -650,8 +650,8 @@ html{
 }
 
 
-/* Ajuste para fundo do currículo */
-#curriculo {
+/* Ajuste para fundo do trajetória */
+#trajetoria {
     background-color: var(--background-primary);
     color: var(--text-primary);
 }
@@ -798,4 +798,138 @@ html{
 /* Card pequeno com a formação */
 #sobre .sobre-card-small .card-body {
     padding: 0.7rem 1.1rem;
+}
+
+/* Título superior dos cards de API */
+.portfolio-card .project-title-top {
+    display: flex;
+    align-items: center;
+    min-height: 4.4rem;
+    padding: 0.9rem 1.25rem;
+    margin: 0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    color: #8b949e;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Títulos centralizados nos projetos pessoais */
+#projetos-pessoais .project-title-top {
+    justify-content: center;
+    text-align: center;
+}
+
+#projetos-pessoais .card-title {
+    text-align: center;
+}
+
+/* Badges de tecnologias (estilo README) */
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.tech-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.22rem 0.55rem;
+    border: 1px solid var(--tech, #8b949e);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--tech, #e6edf3);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tech-badge:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+@supports (background-color: color-mix(in srgb, red 10%, transparent)) {
+    .tech-badge:hover {
+        background-color: color-mix(in srgb, var(--tech) 18%, transparent);
+        box-shadow: 0 4px 14px color-mix(in srgb, var(--tech) 35%, transparent);
+    }
+}
+
+.tech-badge img {
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+
+.tech-badge i {
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+/* Botões dos cards sempre alinhados no canto inferior direito */
+.portfolio-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-card .card-body .mt-auto {
+    margin-top: auto;
+}
+
+/* Conteúdo colapsável dos cards de projeto */
+.portfolio-card .card-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.9s ease, opacity 0.5s ease;
+}
+
+.portfolio-card.expanded .card-content {
+    max-height: 1500px;
+    opacity: 1;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0.5rem;
+}
+
+.btn-ver-mais {
+    background: none;
+    border: 0;
+    padding: 0;
+    color: #8b949e;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.btn-ver-mais:hover {
+    color: #e6edf3;
+}
+
+.btn-ver-mais i {
+    font-size: 0.8rem;
+}
+
+/* Compensa o botão fixo do menu ao rolar até o card */
+.portfolio-card {
+    scroll-margin-top: 80px;
 }

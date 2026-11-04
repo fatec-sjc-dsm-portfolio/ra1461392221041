@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.classList.add('active');
                 
                 // Remover classe visible dos elementos da seção para resetar animações
-                const sectionElements = targetElement.querySelectorAll('.slide-up, .zoom-in, .cv-item, .portfolio-card, .progress');
+                const sectionElements = targetElement.querySelectorAll('.slide-up, .zoom-in, .trajetoria-item, .portfolio-card, .progress');
                 sectionElements.forEach(el => {
                     el.classList.remove('visible');
                     const progressBar = el.querySelector('.progress-bar');
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const progressBars = document.querySelectorAll('.progress');
     progressBars.forEach(bar => observer.observe(bar));
     
-    // Observar items do currículo com observer otimizado
+    // Observar items do trajetória com observer otimizado
     const cvObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -148,8 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
         rootMargin: '0px 0px 100px 0px'
     });
     
-    const cvItems = document.querySelectorAll('.cv-item');
-    cvItems.forEach((item, index) => {
+    const trajetoriaItems = document.querySelectorAll('.trajetoria-item');
+    trajetoriaItems.forEach((item, index) => {
         item.style.transitionDelay = `${index * 0.2}s`;
         cvObserver.observe(item);
     });
@@ -240,3 +240,35 @@ if (emailLink) {
         }, 1500);
     });
 }
+
+// ===== MOSTRAR / ESCONDER CONTEÚDO DOS CARDS DE PROJETO =====
+document.querySelectorAll('.btn-ver-mais').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const card = btn.closest('.portfolio-card');
+        const expanded = card.classList.toggle('expanded');
+        btn.setAttribute('aria-expanded', expanded);
+        btn.querySelector('.ver-mais-label').textContent = expanded ? 'Ver menos' : 'Ver mais';
+        const icon = btn.querySelector('i');
+        icon.classList.toggle('bi-chevron-down', !expanded);
+        icon.classList.toggle('bi-chevron-up', expanded);
+
+        if (expanded) {
+            // Acompanha a abertura do card rolando até o final dele
+            const cardTop = card.getBoundingClientRect().top + window.scrollY;
+            const startY = window.scrollY;
+            const start = performance.now();
+            const duration = 950;
+
+            const follow = (now) => {
+                const progress = Math.min((now - start) / duration, 1);
+                const target = cardTop + card.offsetHeight - window.innerHeight + 16;
+                window.scrollTo(0, Math.max(startY, target));
+                if (progress < 1) requestAnimationFrame(follow);
+            };
+
+            requestAnimationFrame(follow);
+        } else {
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
