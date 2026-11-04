@@ -268,7 +268,7 @@ html{
 }
 
 .section-bg{
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
 }
 
 .trajetoria .trajetoria-title{
@@ -593,14 +593,13 @@ html{
     transition-delay: 0s;
 }
 
-/* Ajustes para seções com fundo branco */
+/* Cor do texto nas seções Sobre e Trajetória */
 #sobre, #trajetoria {
-    background-color: var(--background-primary);
     color: var(--text-primary);
 }
 
 #trajetoria .trajetoria-item h5 {
-    background-color: var(--background-secondary);
+    background-color: #1e242e;
     color: var(--text-primary);
 }
 
@@ -616,12 +615,22 @@ html{
 
 /* Cards da seção Sobre */
 #sobre .sobre-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 10px;
+}
+
+#sobre .sobre-card:first-child {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 767px) {
+    #sobre .sobre-stack {
+        grid-template-columns: 1fr;
+    }
 }
 
 #sobre .sobre-card {
@@ -646,21 +655,23 @@ html{
 }
 
 #sobre .sobre-card .card-body {
-    padding: 0.9rem 1.1rem;
+    padding: 1.5rem 1.75rem;
 }
 
-
-/* Ajuste para fundo do trajetória */
-#trajetoria {
-    background-color: var(--background-primary);
-    color: var(--text-primary);
+#sobre .sobre-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: justify;
 }
+
 
 /* Ajuste para os cards do portfólio */
 .portfolio-card {
     background-color: #1e242e; /* Cinza escuro mais claro */
     color: var(--text-primary);
     border: 1px solid var(--background-secondary);
+    border-radius: 12px;
+    overflow: hidden;
     transition: background-color 0.1s ease, box-shadow 0.1s ease; /* Reduzir o tempo de transição */
 }
 
@@ -933,3 +944,42 @@ html{
 .portfolio-card {
     scroll-margin-top: 80px;
 }
+
+/* ===== DIVISOR ESTILO CÓDIGO ===== */
+.code-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.75rem 2rem;
+    color: var(--highlight);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    opacity: 0.65;
+    user-select: none;
+}
+
+.code-divider::before,
+.code-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(88, 166, 255, 0.45), transparent);
+}
+
+.code-divider-prompt {
+    letter-spacing: 0.1em;
+}
+
+.code-divider-typed {
+    letter-spacing: 0.08em;
+    min-width: 2ch;
+}
+
+.code-divider-typed::after {
+    content: "▌";
+    margin-left: 1px;
+    animation: blink-caret 1s step-end infinite;
+}
+

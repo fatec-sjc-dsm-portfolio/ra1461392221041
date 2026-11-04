@@ -272,3 +272,24 @@ document.querySelectorAll('.btn-ver-mais').forEach(btn => {
         }
     });
 });
+
+
+// ===== EFEITO DE DIGITAÇÃO NOS DIVISORES =====
+const typedDividers = document.querySelectorAll('.code-divider-typed');
+const dividerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting || entry.target.dataset.typed) return;
+        const el = entry.target;
+        el.dataset.typed = '1';
+        const text = el.dataset.text || '';
+        let i = 0;
+        const type = () => {
+            el.textContent = text.slice(0, ++i);
+            if (i < text.length) setTimeout(type, 55);
+        };
+        setTimeout(type, 250);
+        dividerObserver.unobserve(el);
+    });
+}, { threshold: 0, rootMargin: '200px 0px 200px 0px' });
+
+typedDividers.forEach(el => dividerObserver.observe(el));
