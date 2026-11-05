@@ -273,6 +273,26 @@ document.querySelectorAll('.btn-ver-mais').forEach(btn => {
     });
 });
 
+// ===== EXPANDIR / RECOLHER HARD SKILLS E SOFT SKILLS =====
+document.querySelectorAll('.skills-header').forEach(header => {
+    header.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = header.getAttribute('aria-expanded') === 'true';
+        header.setAttribute('aria-expanded', !isOpen);
+
+        const icon = header.querySelector('.skills-icon');
+        if (icon) {
+            icon.classList.toggle('bi-chevron-down', isOpen);
+            icon.classList.toggle('bi-chevron-up', !isOpen);
+        }
+
+        const collapse = header.nextElementSibling;
+        if (collapse && collapse.classList.contains('skills-collapse')) {
+            collapse.classList.toggle('open', !isOpen);
+        }
+    });
+});
+
 
 // ===== EFEITO DE DIGITAÇÃO NOS DIVISORES =====
 const typedDividers = document.querySelectorAll('.code-divider-typed');
