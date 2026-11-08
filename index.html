@@ -1,809 +1,1637 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta
+            name="description"
+            content="Portfólio de Ivan Suiyama Silva, desenvolvedor web full stack e estudante de Desenvolvimento de Software Multiplataforma na FATEC.">
+        <meta name="author" content="Ivan Suiyama Silva">
+        <meta name="theme-color" content="#0d1117">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="icon" type="image/svg+xml" href="static/img/favicon.svg">
+        <link rel="stylesheet" href="static/Bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/style.css?v=24">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/Bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="static/style.css?v=22">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <title>Ivan Suiyama Silva | Desenvolvedor Web Full Stack</title>
 
-    <title>Portfólio Ivan</title>
+        <noscript>
+            <style>
+                .slide-up,
+                .trajetoria .trajetoria-item {
+                    opacity: 1;
+                    transform: none;
+                }
 
-</head>
+                .portfolio-card .card-content,
+                .skills-collapse {
+                    max-height: none;
+                    opacity: 1;
+                }
 
-<body>
-    <i class="bi bi-list menu-mobile"></i>
-    <aside id="header">
-        <section class="profile">
-            <img src="static/img/imageTop2.png" alt="foto ivan">
-            <h1>Ivan Suiyama Silva</h1>
-            <div class="social-links mt-4 text-center">
-                <a target="_blank" href="https://github.com/IvanSuiyama">
-                    <i class="bi bi-github"></i>
-                </a>
-                <a target="_blank" href="https://www.linkedin.com/in/ivan-suiyama-silva-248042186/">
-                    <i class="bi bi-linkedin"></i>
-                </a>
+                .btn-ver-mais {
+                    display: none;
+                }
+
+                @media (max-width: 1024px) {
+                    #header {
+                        position: static;
+                        visibility: visible;
+                        width: auto;
+                    }
+
+                    .menu-mobile {
+                        display: none;
+                    }
+
+                    #main {
+                        margin-left: 0;
+                    }
+                }
+            </style>
+        </noscript>
+    </head>
+
+    <body>
+        <a class="skip-link" href="#main">Pular para o conteúdo</a>
+        <button
+            type="button"
+            class="menu-mobile bi bi-list"
+            aria-label="Abrir menu de navegação"
+            aria-expanded="false"
+            aria-controls="header"
+        ></button>
+        <aside id="header">
+            <div class="profile">
+                <img src="static/img/imageTop2.png" alt="Foto de perfil de Ivan Suiyama Silva">
+                <p class="profile-name">Ivan Suiyama Silva</p>
+                <div class="social-links mt-4 text-center">
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/IvanSuiyama"
+                        aria-label="GitHub de Ivan Suiyama (abre em nova aba)"
+                    >
+                        <i class="bi bi-github" aria-hidden="true"></i>
+                    </a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.linkedin.com/in/ivan-suiyama-silva-248042186/"
+                        aria-label="LinkedIn de Ivan Suiyama (abre em nova aba)"
+                    >
+                        <i class="bi bi-linkedin" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
-        </section>
 
-        <nav id="navbar" class="nav-menu">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#inicio"><i class="bi bi-house"></i> Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sobre"><i class="bi bi-person"></i> Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#trajetoria"><i class="bi bi-file-earmark"></i> Trajetória</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#habilidades"><i class="bi bi-list-check"></i> Habilidades</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#apis"><i class="bi bi-journal-code"></i> Projetos Acadêmicos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projetos-pessoais"><i class="bi bi-laptop"></i> Projetos Pessoais e Profissionais</a>
-                </li>
-            </ul>
-        </nav>
-    </aside>
+            <nav id="navbar" class="nav-menu" aria-label="Navegação principal">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#inicio"
+                            ><i class="bi bi-house" aria-hidden="true"></i> Início</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre"><i class="bi bi-person" aria-hidden="true"></i> Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#trajetoria"
+                            ><i class="bi bi-eyeglasses" aria-hidden="true"></i> Trajetória</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#habilidades"
+                            ><i class="bi bi-list-check" aria-hidden="true"></i> Habilidades</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#apis"
+                            ><i class="bi bi-journal-code" aria-hidden="true"></i> Projetos Acadêmicos</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projetos-pessoais"
+                            ><i class="bi bi-laptop" aria-hidden="true"></i> Profissionais e Pessoais</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
-    <main id="main">
-        <section id="inicio" class="row m-0 p-0">
-            <div class="col-md-7 hero-text d-flex justify-content-center align-items-center flex-column ">
-
-                <h2 class="text-white text-shadow">Ivan<br>Suiyama<br>Silva</h2>
-                <span id="subtitle" class="text-white text-shadow">**Desenvolvedor Web Full Stack**</span>
-            </div>
-            <div class="col-md-5 d-flex justify-content-end align-items-end">
+        <main id="main" tabindex="-1">
+            <section id="inicio" class="row m-0 p-0">
+                <div class="col-md-7 hero-text d-flex justify-content-center align-items-center flex-column">
+                    <h1 class="text-white text-shadow">Ivan<br>Suiyama<br>Silva</h1>
+                    <span id="subtitle" class="text-white text-shadow">Desenvolvedor Web Full Stack</span>
+                </div>
                 <div id="arraste" class="d-flex align-items-center">
-                    <a href="mailto:ivan.silva5@aluno.cps.sp.gov.br" id="email-copy"
+                    <a
+                        href="mailto:ivan.silva5@aluno.cps.sp.gov.br"
+                        id="email-copy"
                         data-email="ivan.silva5@aluno.cps.sp.gov.br"
-                        title="Clique para copiar">ivan.silva5@aluno.cps.sp.gov.br</a>
+                        title="Clique para copiar"
+                        aria-live="polite"
+                        >ivan.silva5@aluno.cps.sp.gov.br</a
+                    >
                 </div>
-            </div>
+            </section>
 
-        </section>
-
-        <section class="mt-5 section-bg" id="sobre">
-            <div class="sobre-stack">
-                <div class="card sobre-card sobre-card-small slide-up">
-                    <div class="card-body">
-                        <p class="sobre-kicker mb-0">
-                            Estudante de Desenvolvimento de Software Multiplataforma (DSM) FATEC - 6° Semestre
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card sobre-card slide-up">
-                    <div class="card-body">
-                        <h2>Sobre</h2>
-                        <p class="mb-0" id="sobre-text">
-                            Desde sempre gosto de programar em Python e busco constantemente aprender novas
-                            tecnologias. Tenho mais afinidade com o backend, mas também sou capaz de
-                            desenvolver um ótimo frontend, o que me permite atuar de ponta a ponta nos
-                            projetos. Valorizo código limpo, boas práticas de desenvolvimento e soluções que
-                            resolvam problemas reais. Atualmente trabalho como desenvolvedor full stack e
-                            direciono meus estudos a novas tecnologias e a modelos de IA.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card sobre-card slide-up">
-                    <div class="card-body">
-                        <h3>Objetivo</h3>
-                        <p class="mb-0">
-                            Meu objetivo é atuar como Desenvolvedor Web Full Stack, construindo aplicações
-                            completas — do backend ao frontend — com foco em código limpo, segurança e boa
-                            experiência para o usuário. Ao longo da graduação em Desenvolvimento de Software
-                            Multiplataforma, busco evoluir continuamente por meio de projetos reais e me
-                            preparar para o mercado, unindo desenvolvimento web e boas práticas de segurança.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="code-divider" aria-hidden="true"><span class="code-divider-prompt">&lt;</span><span class="code-divider-typed" data-text="Trajetória"></span><span class="code-divider-prompt">&gt;</span></div>
-
-        <section class="mt-5 trajetoria" id="trajetoria">
-            <div class="container pb-5">
-                <h2 class="pt-3 pb-4">Trajetória</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3 class="trajetoria-title">Acadêmica</h3>
-                        <div class="trajetoria-item">
-                            <h4>Tecnólogo em Desenvolvimento de Software Multiplataforma</h4>
-                            <h5>2023 - Atual</h5>
-                            <p><em>Faculdade de Tecnologia FATEC Prof Jessen Vidal</em></p>
-                            <p>Tecnólogo voltado a aprender a aprender, com as linguagens, python, React, React-Native,
-                                Java, Typescript, NodeJs
-                                entre outras, visando a criação de sites, sistemas web e aplicativos mobile, com duração
-                                de 6 semestres
-                            </p>
-                        </div>
-                        <div class="trajetoria-item">
-                            <h4>Tecnólogo em Manufatura Avançada</h4>
-                            <h5>2019 - 2021</h5>
-                            <p><em>Faculdade de Tecnologia FATEC Prof Jessen Vidal</em></p>
-                            <p>Tecnólogo voltado a automação e inovação, com metodologias ágeis como Scrum,
-                                com projetos integrados que forçam o aprendizado em todas
-                                as matérias do semestre.
+            <section class="mt-5 section-bg" id="sobre">
+                <div class="sobre-stack">
+                    <div class="card sobre-card sobre-card-small slide-up">
+                        <div class="card-body">
+                            <p class="sobre-kicker mb-0">
+                                Estudante de Desenvolvimento de Software Multiplataforma (DSM) na FATEC, atualmente no
+                                6º semestre
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <h3 class="trajetoria-title">Profissional</h3>
-                        <div class="trajetoria-item">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h4>Estágio - Desenvolvedor de Software</h4>
-                                    <h5>05/2026 - Atualmente</h5>
-                                    <p><em>Play Educacional</em></p>
-                                    <p>Responsável pelo desenvolvimento de sistemas internos, execução de manutenções
-                                        corretivas e evolutivas em aplicações web, além do gerenciamento e administração
-                                        de servidores VPS, garantindo a disponibilidade e o desempenho das soluções implantadas.
-                                    </p>
+
+                    <div class="card sobre-card slide-up">
+                        <div class="card-body">
+                            <h2>Sobre</h2>
+                            <p class="mb-0" id="sobre-text">
+                                Sempre gostei de programar em Python e procuro aprender constantemente novas
+                                tecnologias. Tenho mais afinidade com o backend, mas também sou capaz de desenvolver um
+                                ótimo frontend, o que me permite atuar de ponta a ponta nos projetos. Valorizo código
+                                limpo, boas práticas de desenvolvimento e soluções que resolvam problemas reais.
+                                Atualmente trabalho como desenvolvedor full stack e direciono meus estudos a novas
+                                tecnologias e a modelos de IA.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card sobre-card slide-up">
+                        <div class="card-body">
+                            <h3>Objetivo</h3>
+                            <p class="mb-0">
+                                Meu objetivo é atuar como Desenvolvedor Web Full Stack, construindo aplicações completas
+                                — do backend ao frontend — com foco em código limpo, segurança e boa experiência para o
+                                usuário. Ao longo da graduação em Desenvolvimento de Software Multiplataforma, busco
+                                evoluir continuamente por meio de projetos reais e me preparar para o mercado, unindo
+                                desenvolvimento web e boas práticas de segurança.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="code-divider" aria-hidden="true">
+                <span class="code-divider-prompt">&lt;</span>
+                <span class="code-divider-typed" data-text="Trajetória"></span>
+                <span class="code-divider-prompt">&gt;</span>
+            </div>
+
+            <section class="mt-5 trajetoria" id="trajetoria">
+                <div class="container pb-5">
+                    <h2 class="pt-3 pb-4">Trajetória</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="trajetoria-title">Acadêmica</h3>
+                            <div class="trajetoria-item">
+                                <h4>Tecnólogo em Desenvolvimento de Software Multiplataforma</h4>
+                                <h5>2023 – Atual</h5>
+                                <p><em>Faculdade de Tecnologia FATEC Prof. Jessen Vidal</em></p>
+                                <p>
+                                    Tecnólogo voltado a aprender a aprender, com linguagens como Python, React, React
+                                    Native, Java, TypeScript e Node.js, entre outras, com foco na criação de sites,
+                                    sistemas web e aplicativos mobile. Duração: 6 semestres.
+                                </p>
+                            </div>
+                            <div class="trajetoria-item">
+                                <h4>Tecnólogo em Manufatura Avançada</h4>
+                                <h5>2019 – 2021</h5>
+                                <p><em>Faculdade de Tecnologia FATEC Prof. Jessen Vidal</em></p>
+                                <p>
+                                    Tecnólogo voltado à automação e à inovação, com metodologias ágeis como Scrum e
+                                    projetos integrados que estimulam o aprendizado em todas as matérias do semestre.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="trajetoria-title">Profissional</h3>
+                            <div class="trajetoria-item">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h4>Estágio – Desenvolvedor de Software</h4>
+                                        <h5>05/2026 – Atualmente</h5>
+                                        <p><em>Play Educacional</em></p>
+                                        <p>
+                                            Responsável pelo desenvolvimento de sistemas internos, execução de
+                                            manutenções corretivas e evolutivas em aplicações web, além do gerenciamento
+                                            e administração de servidores VPS, garantindo a disponibilidade e o
+                                            desempenho das soluções implantadas.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <div class="code-divider" aria-hidden="true">
+                <span class="code-divider-prompt">&lt;</span>
+                <span class="code-divider-typed" data-text="Habilidades"></span>
+                <span class="code-divider-prompt">&gt;</span>
             </div>
-        </section>
 
-        <div class="code-divider" aria-hidden="true"><span class="code-divider-prompt">&lt;</span><span class="code-divider-typed" data-text="Habilidades"></span><span class="code-divider-prompt">&gt;</span></div>
+            <section class="mt-5 section-bg" id="habilidades">
+                <div class="container pb-5">
+                    <h2 class="pt-5 text-center">Habilidades</h2>
 
-        <section class="mt-5 section-bg" id="habilidades">
-            <div class="container pb-5">
-                <h2 class="pt-5 text-center">Habilidades</h2>
-
-                <div class="skill-legend mb-4">
-                    <span>
-                        <span class="skill-level">
-                            <i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i>
+                    <div class="skill-legend mb-4">
+                        <span>
+                            <span class="skill-level" aria-hidden="true">
+                                <i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i
+                                ><i class="bi bi-check-circle-fill"></i>
+                            </span>
+                            Sei fazer sozinho
                         </span>
-                        sei fazer sozinho
-                    </span>
-                    <span>
-                        <span class="skill-level">
-                            <i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i>
+                        <span>
+                            <span class="skill-level" aria-hidden="true">
+                                <i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i
+                                ><i class="bi bi-circle"></i>
+                            </span>
+                            Sei fazer com ajuda
                         </span>
-                        sei fazer com ajuda
-                    </span>
-                    <span>
-                        <span class="skill-level">
-                            <i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i><i class="bi bi-circle"></i>
+                        <span>
+                            <span class="skill-level" aria-hidden="true">
+                                <i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i
+                                ><i class="bi bi-circle"></i>
+                            </span>
+                            Ouvi falar
                         </span>
-                        ouvi falar
-                    </span>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-6 d-flex">
+                            <div class="card skill-card h-100 w-100 slide-up">
+                                <div class="card-body">
+                                    <h3>Backend</h3>
+                                    <ul class="skill-list">
+                                        <li>
+                                            <span>Python</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>FastAPI</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>Flask</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>Node.js</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>Java</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer com ajuda"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-circle" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>Spring Boot</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer com ajuda"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-circle" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-flex">
+                            <div class="card skill-card h-100 w-100 slide-up">
+                                <div class="card-body">
+                                    <h3>Frontend</h3>
+                                    <ul class="skill-list">
+                                        <li>
+                                            <span>HTML</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>CSS</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>React</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>React Native</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>Flutter</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer com ajuda"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-circle" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>Bootstrap</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer com ajuda"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-circle" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>Tailwind</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer com ajuda"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-circle" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-flex">
+                            <div class="card skill-card h-100 w-100 slide-up">
+                                <div class="card-body">
+                                    <h3>Banco de Dados</h3>
+                                    <ul class="skill-list">
+                                        <li>
+                                            <span>SQL</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>MySQL</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>PostgreSQL</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>SQLite</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>Redis</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer com ajuda"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-circle" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>MongoDB</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer com ajuda"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-circle" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>MariaDB</span
+                                            ><span class="skill-level" role="img" aria-label="Ouvi falar"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-circle" aria-hidden="true"></i
+                                                ><i class="bi bi-circle" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-flex">
+                            <div class="card skill-card h-100 w-100 slide-up">
+                                <div class="card-body">
+                                    <h3>Adicionais</h3>
+                                    <ul class="skill-list">
+                                        <li>
+                                            <span>Linux</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>Docker</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>Bash</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>LGPD</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer sozinho"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>Regex</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer com ajuda"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-circle" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                        <li>
+                                            <span>Orange Data Mining</span
+                                            ><span class="skill-level" role="img" aria-label="Sei fazer com ajuda"
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                                                ><i class="bi bi-circle" aria-hidden="true"></i
+                                            ></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </section>
 
-                <div class="row g-4">
-                    <div class="col-md-6 d-flex">
-                        <div class="card skill-card h-100 w-100 slide-up">
-                            <div class="card-body">
-                                <h3>Backend</h3>
-                                <ul class="skill-list">
-                                    <li><span>Python</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>FastAPI</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>Flask</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>Node.js</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>Java</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
-                                    <li><span>Spring Boot</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 d-flex">
-                        <div class="card skill-card h-100 w-100 slide-up">
-                            <div class="card-body">
-                                <h3>Frontend</h3>
-                                <ul class="skill-list">
-                                    <li><span>HTML</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>CSS</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>React</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>React Native</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>Flutter</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
-                                    <li><span>Bootstrap</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
-                                    <li><span>Tailwind</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 d-flex">
-                        <div class="card skill-card h-100 w-100 slide-up">
-                            <div class="card-body">
-                                <h3>Banco de Dados</h3>
-                                <ul class="skill-list">
-                                    <li><span>SQL</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>MySQL</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>PostgreSQL</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>SQLite</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>Redis</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
-                                    <li><span>MongoDB</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
-                                    <li><span>MariaDB</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i><i class="bi bi-circle"></i></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 d-flex">
-                        <div class="card skill-card h-100 w-100 slide-up">
-                            <div class="card-body">
-                                <h3>Adicionais</h3>
-                                <ul class="skill-list">
-                                    <li><span>Linux</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>Docker</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>Bash</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>LGPD</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i></span></li>
-                                    <li><span>Regex</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
-                                    <li><span>Orange Data Mining</span><span class="skill-level"><i class="bi bi-check-circle-fill"></i><i class="bi bi-check-circle-fill"></i><i class="bi bi-circle"></i></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="code-divider" aria-hidden="true">
+                <span class="code-divider-prompt">&lt;</span>
+                <span class="code-divider-typed" data-text="Projetos Acadêmicos"></span>
+                <span class="code-divider-prompt">&gt;</span>
             </div>
-        </section>
 
+            <section id="apis" class="mt-5">
+                <div class="container pb-5 pt-5">
+                    <h2 class="pb-4">Projetos Acadêmicos (APIs)</h2>
 
-
-        <div class="code-divider" aria-hidden="true"><span class="code-divider-prompt">&lt;</span><span class="code-divider-typed" data-text="Projetos Acadêmicos"></span><span class="code-divider-prompt">&gt;</span></div>
-
-        <section id="portifolio" class="mt-5">
-            <section id="apis">
-            <div class="container pb-5 pt-5">
-                <h2 class="pb-4">Projetos Acadêmicos (APIs)</h2>
-
-                <div class="container">
-                    <!-- Linha 1: Veredito -->
-                    <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
-
-                        <!-- Veredito -->
-                        <div class="col">
-                            <div class="card h-100 slide-up portfolio-card" data-delay="0.3">
-                                <h5 class="card-title project-title-top">API 5° Semestre - Veredito</h5>
-                                <div class="card-img-top"
-                                    style="width:100%; height:250px; min-height:250px; display:grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap:2px; background:#000; overflow:hidden;">
-                                    <div class="app-screenshot-container">
-                                        <img src="static/img/tela1.png" alt="Veredito tela inicial" style="cursor:pointer;"
-                                            onclick="window.open(this.src)">
-                                    </div>
-                                    <div class="app-screenshot-container">
-                                        <img src="static/img/tela2.png" alt="Veredito análise de petição" style="cursor:pointer;"
-                                            onclick="window.open(this.src)">
-                                    </div>
-                                    <div class="app-screenshot-container">
-                                        <img src="static/img/tela3.png" alt="Veredito histórico" style="cursor:pointer;"
-                                            onclick="window.open(this.src)">
-                                    </div>
-                                    <div class="app-screenshot-container">
-                                        <img src="static/img/tela4.png" alt="Veredito nova análise" style="cursor:pointer;"
-                                            onclick="window.open(this.src)">
-                                    </div>
-                                    <div class="app-screenshot-container">
-                                        <img src="static/img/tela6.png" alt="Veredito dados do caso" style="cursor:pointer;"
-                                            onclick="window.open(this.src)">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="tech-badges"><span class="tech-badge" style="--tech:#02569B"><img src="https://cdn.simpleicons.org/flutter/02569B" alt="" loading="lazy">Flutter</span><span class="tech-badge" style="--tech:#E0234E"><img src="https://cdn.simpleicons.org/nestjs/E0234E" alt="" loading="lazy">NestJS</span><span class="tech-badge" style="--tech:#A78BFA"><i class="bi bi-stars"></i>IA Generativa</span></div>
-                                    <div class="card-content">
-                                        <h5 class="card-title">Aplicação Mobile para Auxiliar Juízes e Advogados</h5>
-                                        <h4 class="card-about-title">Sobre o projeto:</h4>
-                                        <p class="text-card-porti">Aplicação mobile desenvolvida para auxiliar juízes e advogados no dia a dia jurídico, utilizando inteligência artificial generativa e comparação semântica de embeddings para análise de documentos, busca de precedentes e elaboração de minutas de processos, <span class="client-label">Empresa Parceira:</span> <span class="client-name">Xertica AI</span>.</p>
-
-                                                                                <h3 class="subtitle-card">Contribuições pessoais no projeto:</h3>
-                                        <ul class="skills-list contribution-list">
-                                            <li>Atuação no backend e no frontend da aplicação.</li>
-                                            <li>Implementação de streaming via protocolo SSE (Server-Sent Events).</li>
-                                            <li>Exibição progressiva das respostas da IA, sem aguardar o processamento completo.</li>
-                                            <li>Desenvolvimento do histórico de petições.</li>
-                                        </ul>
-<div class="skills-section">
-                                            <div class="skills-header" role="button" tabindex="0" aria-expanded="false">
-                                                <span class="skills-title">Hard Skills</span>
-                                                <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="skills-collapse">
-                                                <ul class="skills-list">
-                                                    <li>NestJS &amp; TypeScript</li>
-                                                    <li>PostgreSQL &amp; TypeORM</li>
-                                                    <li>LangChain &amp; OpenAI API</li>
-                                                    <li>Embeddings e busca semântica</li>
-                                                    <li>Streaming em tempo real com SSE (Server-Sent Events)</li>
-                                                    <li>Flutter &amp; Dart</li>
-                                                    <li>Riverpod &amp; Dio</li>
-                                                    <li>Docker &amp; Swagger</li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="skills-header" role="button" tabindex="0" aria-expanded="false">
-                                                <span class="skills-title">Soft Skills</span>
-                                                <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="skills-collapse">
-                                                <ul class="skills-list">
-                                                    <li><strong>Colaboração:</strong> Aprendi que posso pedir ajuda e contar com o apoio dos colegas, entendendo que isso fortalece o resultado final.</li>
-                                                    <li><strong>Humildade:</strong> Entendi que não preciso ser o foco principal nem concentrar tudo em mim, reconhecendo o valor do trabalho coletivo.</li>
-                                                    <li><strong>Confiança e delegação:</strong> Aprendi a dividir responsabilidades e confiar no time, sem tentar fazer tudo sozinho.</li>
-                                                </ul>
-                                            </div>
+                    <div class="container">
+                        <!-- Linha 1: Veredito -->
+                        <div class="row row-cols-1 row-cols-md-2 g-4 mt-4 align-items-start">
+                            <!-- Veredito -->
+                            <div class="col">
+                                <div class="card slide-up portfolio-card" data-delay="0.3">
+                                    <h3 class="card-title project-title-top">API – 5º semestre · Veredito</h3>
+                                    <div class="card-img-top screenshot-grid screenshot-grid-5">
+                                        <div class="app-screenshot-container">
+                                            <img
+                                                src="static/img/tela1.png"
+                                                alt="Tela inicial do aplicativo Veredito"
+                                                loading="lazy"
+                                                decoding="async">
                                         </div>
-                                                                            </div>
-                                    <div class="card-actions mt-auto">
-                                        <button class="btn-ver-mais" type="button" aria-expanded="false">
-                                            <span class="ver-mais-label">Ver mais</span>
-                                            <i class="bi bi-chevron-down" aria-hidden="true"></i>
-                                        </button>
-                                        <div class="d-flex gap-2">
-                                            <a href="https://github.com/IvanSuiyama/API_5_semestre_Veredito" target="_blank"
-                                                class="btn btn-outline-primary">
-                                                <i class="bi bi-github"></i> GitHub
-                                            </a>
+                                        <div class="app-screenshot-container">
+                                            <img
+                                                src="static/img/tela2.png"
+                                                alt="Tela de análise de petição do aplicativo Veredito"
+                                                loading="lazy"
+                                                decoding="async">
+                                        </div>
+                                        <div class="app-screenshot-container">
+                                            <img
+                                                src="static/img/tela3.png"
+                                                alt="Tela de histórico do aplicativo Veredito"
+                                                loading="lazy"
+                                                decoding="async">
+                                        </div>
+                                        <div class="app-screenshot-container">
+                                            <img
+                                                src="static/img/tela4.png"
+                                                alt="Tela de nova análise do aplicativo Veredito"
+                                                loading="lazy"
+                                                decoding="async">
+                                        </div>
+                                        <div class="app-screenshot-container">
+                                            <img
+                                                src="static/img/tela6.png"
+                                                alt="Tela de dados do caso do aplicativo Veredito"
+                                                loading="lazy"
+                                                decoding="async">
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
+                                    <div class="card-body">
+                                        <div class="tech-badges">
+                                            <span class="tech-badge" style="--tech: #02569b"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/flutter/02569B"
+                                                    alt=""
+                                                    loading="lazy">Flutter</span
+                                            ><span class="tech-badge" style="--tech: #e0234e"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/nestjs/E0234E"
+                                                    alt=""
+                                                    loading="lazy">NestJS</span
+                                            ><span class="tech-badge" style="--tech: #a78bfa"
+                                                ><i class="bi bi-stars" aria-hidden="true"></i>IA Generativa</span
+                                            >
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">
+                                                Aplicação Mobile para Auxiliar Juízes e Advogados
+                                            </h4>
+                                            <h5 class="card-about-title">Sobre o projeto:</h5>
+                                            <p class="text-card-porti">
+                                                Aplicação mobile desenvolvida para auxiliar juízes e advogados no dia a
+                                                dia jurídico, utilizando inteligência artificial generativa e comparação
+                                                semântica de embeddings para análise de documentos, busca de precedentes
+                                                e elaboração de minutas de processos.
+                                                <span class="client-label">Empresa Parceira:</span>
+                                                <span class="client-name">Xertica AI</span>.
+                                            </p>
 
-                    </div> <!-- fim linha 1 -->
+                                            <h5 class="subtitle-card">Contribuições pessoais no projeto:</h5>
+                                            <ul class="skills-list contribution-list">
+                                                <li>Atuação no backend e no frontend da aplicação.</li>
+                                                <li>
+                                                    Implementação de streaming via protocolo SSE (Server-Sent Events).
+                                                </li>
+                                                <li>
+                                                    Exibição progressiva das respostas da IA, sem aguardar o
+                                                    processamento completo.
+                                                </li>
+                                                <li>Desenvolvimento do histórico de petições.</li>
+                                            </ul>
+                                            <div class="skills-section">
+                                                <div
+                                                    class="skills-header"
+                                                    role="button"
+                                                    tabindex="0"
+                                                    aria-expanded="false"
+                                                >
+                                                    <span class="skills-title">Hard Skills</span>
+                                                    <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="skills-collapse">
+                                                    <ul class="skills-list">
+                                                        <li>NestJS &amp; TypeScript</li>
+                                                        <li>PostgreSQL &amp; TypeORM</li>
+                                                        <li>LangChain &amp; OpenAI API</li>
+                                                        <li>Embeddings e busca semântica</li>
+                                                        <li>Streaming em tempo real com SSE (Server-Sent Events)</li>
+                                                        <li>Flutter &amp; Dart</li>
+                                                        <li>Riverpod &amp; Dio</li>
+                                                        <li>Docker &amp; Swagger</li>
+                                                    </ul>
+                                                </div>
 
-                   <!-- Linha 2: Estação Meteorológica + Portal de Transparência -->
-                    <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
-
-                        <div class="col">
-                            <div class="card h-100 slide-up portfolio-card" data-delay="0.4">
-                                <h5 class="card-title project-title-top">API 4° Semestre - Sistema de Controle Estação Meteorológica</h5>
-                                <img src="static/img/photo_Estacao.png" class="card-img-top"
-                                    alt="Sistema de controle para estação meteorológica"
-                                    style="object-fit:cover; object-position: left center; width:100%; height:250px;">
-                                <div class="card-body">
-                                    <div class="tech-badges"><span class="tech-badge" style="--tech:#3776AB"><img src="https://cdn.simpleicons.org/python/3776AB" alt="" loading="lazy">Python</span><span class="tech-badge" style="--tech:#009688"><img src="https://cdn.simpleicons.org/fastapi/009688" alt="" loading="lazy">FastAPI</span><span class="tech-badge" style="--tech:#61DAFB"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="" loading="lazy">React</span><span class="tech-badge" style="--tech:#007ACC"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="" loading="lazy">VS Code</span></div>
-                                    <div class="card-content">
-                                        <h5 class="card-title">Sistema de Controle para Estação Meteorológica</h5>
-                                        <h4 class="card-about-title">Sobre o projeto:</h4>
-                                        <p class="text-card-porti">Sistema de controle e monitoramento climático projetado para coletar, processar e exibir dados meteorológicos em tempo real a partir de sensores físicos e estações integradas, <span class="client-label">Empresa Parceira:</span> <span class="client-name">Tecsus</span>.</p>
-
-                                                                                <h3 class="subtitle-card">Contribuições pessoais no projeto:</h3>
-                                        <ul class="skills-list contribution-list">
-                                            <li>Integração dos dados das estações meteorológicas.</li>
-                                            <li>Desenvolvimento da parte física do projeto.</li>
-                                            <li>Montagem com ESP32 e sensores de luminosidade, temperatura, umidade e pluviômetro.</li>
-                                        </ul>
-<div class="skills-section">
-                                            <div class="skills-header" role="button" tabindex="0" aria-expanded="false">
-                                                <span class="skills-title">Hard Skills</span>
-                                                <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="skills-collapse">
-                                                <ul class="skills-list">
-                                                    <li>Python &amp; FastAPI</li>
-                                                    <li>SQLAlchemy &amp; PostgreSQL</li>
-                                                    <li>Alembic (migrações de banco)</li>
-                                                    <li>spaCy (processamento de linguagem natural)</li>
-                                                    <li>React, TypeScript &amp; Vite</li>
-                                                    <li>Leaflet (mapas interativos)</li>
-                                                    <li>Highcharts &amp; Chart.js</li>
-                                                    <li>ESP32 &amp; sensores IoT</li>
-                                                    <li>Docker</li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="skills-header" role="button" tabindex="0" aria-expanded="false">
-                                                <span class="skills-title">Soft Skills</span>
-                                                <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="skills-collapse">
-                                                <ul class="skills-list">
-                                                    <li><strong>Autonomia:</strong> Assumi as tarefas sem esperar cobrança ou direcionamento, tomando a iniciativa para manter o projeto andando.</li>
-                                                    <li><strong>Resiliência:</strong> Mesmo com o grupo se desfazendo e uma sprint inteira sem equipe, mantive o compromisso até ser acolhido por outro grupo.</li>
-                                                    <li><strong>Organização:</strong> Ao entrar em um grupo que já tinha quase tudo pronto, planejei e executei a maior parte da sprint final, garantindo a conclusão das entregas.</li>
-                                                </ul>
+                                                <div
+                                                    class="skills-header"
+                                                    role="button"
+                                                    tabindex="0"
+                                                    aria-expanded="false"
+                                                >
+                                                    <span class="skills-title">Soft Skills</span>
+                                                    <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="skills-collapse">
+                                                    <ul class="skills-list">
+                                                        <li>
+                                                            <strong>Colaboração:</strong> Aprendi que posso pedir ajuda
+                                                            e contar com o apoio dos colegas, entendendo que isso
+                                                            fortalece o resultado final.
+                                                        </li>
+                                                        <li>
+                                                            <strong>Humildade:</strong> Entendi que não preciso ser o
+                                                            foco principal nem concentrar tudo em mim, reconhecendo o
+                                                            valor do trabalho coletivo.
+                                                        </li>
+                                                        <li>
+                                                            <strong>Confiança e delegação:</strong> Aprendi a dividir
+                                                            responsabilidades e confiar no time, sem tentar fazer tudo
+                                                            sozinho.
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
-                                                                            </div>
-                                    <div class="card-actions mt-auto">
-                                        <button class="btn-ver-mais" type="button" aria-expanded="false">
-                                            <span class="ver-mais-label">Ver mais</span>
-                                            <i class="bi bi-chevron-down" aria-hidden="true"></i>
-                                        </button>
-                                        <div class="d-flex gap-2">
-                                            <a href="https://github.com/IvanSuiyama/API_4_semestre_Sistema_de_Controle_Estacao_Meteorologica" target="_blank"
-                                                class="btn btn-outline-primary">
-                                                <i class="bi bi-github"></i> GitHub
-                                            </a>
+                                        <div class="card-actions mt-auto">
+                                            <button class="btn-ver-mais" type="button" aria-expanded="false">
+                                                <span class="ver-mais-label">Ver mais</span>
+                                                <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="d-flex gap-2">
+                                                <a
+                                                    href="https://github.com/IvanSuiyama/API_5_semestre_Veredito"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    aria-label="Abrir o repositório do projeto Veredito no GitHub (nova aba)"
+                                                    class="btn btn-outline-primary"
+                                                >
+                                                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- fim linha 1 -->
 
-                        <div class="col">
-                            <div class="card h-100 slide-up portfolio-card" data-delay="0.5">
-                                <h5 class="card-title project-title-top">API 3° Semestre - Portal de Transparência</h5>
-                                <img src="static/img/portal.png" class="card-img-top" alt="Portal de transparência"
-                                    style="object-fit:cover; width:100%; height:250px;">
-                                <div class="card-body">
-                                    <div class="tech-badges"><span class="tech-badge" style="--tech:#3178C6"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" loading="lazy">TypeScript</span><span class="tech-badge" style="--tech:#61DAFB"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="" loading="lazy">React</span><span class="tech-badge" style="--tech:#E76F00"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="" loading="lazy">Java</span><span class="tech-badge" style="--tech:#6DB33F"><img src="https://cdn.simpleicons.org/springboot/6DB33F" alt="" loading="lazy">Spring Boot</span></div>
-                                    <div class="card-content">
-                                        <h5 class="card-title">Portal de Transparência</h5>
-                                        <h4 class="card-about-title">Sobre o projeto:</h4>
-                                        <p class="text-card-porti">Plataforma web desenvolvida para atender às necessidades da Fundação FAPG, promovendo a transparência pública de projetos, investimentos e bolsistas para fiscalização e acompanhamento da sociedade, <span class="client-label">Empresa Parceira:</span> <span class="client-name">FAPG</span>.</p>
+                        <!-- Linha 2: Estação Meteorológica + Portal de Transparência -->
+                        <div class="row row-cols-1 row-cols-md-2 g-4 mt-4 align-items-start">
+                            <div class="col">
+                                <div class="card slide-up portfolio-card" data-delay="0.4">
+                                    <h3 class="card-title project-title-top">
+                                        API – 4º semestre · Estação Meteorológica
+                                    </h3>
+                                    <img
+                                        src="static/img/photo_Estacao.png"
+                                        class="card-img-top project-cover project-cover--left"
+                                        alt="Tela do sistema de controle da estação meteorológica"
+                                        loading="lazy"
+                                        decoding="async">
+                                    <div class="card-body">
+                                        <div class="tech-badges">
+                                            <span class="tech-badge" style="--tech: #3776ab"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/python/3776AB"
+                                                    alt=""
+                                                    loading="lazy">Python</span
+                                            ><span class="tech-badge" style="--tech: #009688"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/fastapi/009688"
+                                                    alt=""
+                                                    loading="lazy">FastAPI</span
+                                            ><span class="tech-badge" style="--tech: #61dafb"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/react/61DAFB"
+                                                    alt=""
+                                                    loading="lazy">React</span
+                                            ><span class="tech-badge" style="--tech: #007acc"
+                                                ><img
+                                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"
+                                                    alt=""
+                                                    loading="lazy">VS Code</span
+                                            >
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Sistema de Controle para Estação Meteorológica</h4>
+                                            <h5 class="card-about-title">Sobre o projeto:</h5>
+                                            <p class="text-card-porti">
+                                                Sistema de controle e monitoramento climático projetado para coletar,
+                                                processar e exibir dados meteorológicos em tempo real a partir de
+                                                sensores físicos e estações integradas.
+                                                <span class="client-label">Empresa Parceira:</span>
+                                                <span class="client-name">Tecsus</span>.
+                                            </p>
 
-                                                                                <h3 class="subtitle-card">Contribuições pessoais no projeto:</h3>
-                                        <ul class="skills-list contribution-list">
-                                            <li>Ciclo completo de cadastro de projetos (cadastro, edição e exclusão).</li>
-                                            <li>Ciclo completo de cadastro de bolsistas (cadastro, edição e exclusão).</li>
-                                            <li>Implementação de ocultação de campos.</li>
-                                            <li>Implementação da autenticação.</li>
-                                        </ul>
-<div class="skills-section">
-                                            <div class="skills-header" role="button" tabindex="0" aria-expanded="false">
-                                                <span class="skills-title">Hard Skills</span>
-                                                <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="skills-collapse">
-                                                <ul class="skills-list">
-                                                    <li>Java 17 &amp; Spring Boot</li>
-                                                    <li>Spring Data JPA &amp; Hibernate</li>
-                                                    <li>Spring Security &amp; JWT</li>
-                                                    <li>MySQL</li>
-                                                    <li>React &amp; TypeScript</li>
-                                                    <li>Bootstrap &amp; Chart.js</li>
-                                                    <li>jsPDF &amp; XLSX (exportação de relatórios)</li>
-                                                    <li>Selenium (web scraping)</li>
-                                                    <li>Maven</li>
-                                                </ul>
-                                            </div>
+                                            <h5 class="subtitle-card">Contribuições pessoais no projeto:</h5>
+                                            <ul class="skills-list contribution-list">
+                                                <li>Integração dos dados das estações meteorológicas.</li>
+                                                <li>Desenvolvimento da camada física (hardware) do projeto.</li>
+                                                <li>
+                                                    Montagem com ESP32 e sensores de luminosidade, temperatura, umidade
+                                                    e pluviômetro.
+                                                </li>
+                                            </ul>
+                                            <div class="skills-section">
+                                                <div
+                                                    class="skills-header"
+                                                    role="button"
+                                                    tabindex="0"
+                                                    aria-expanded="false"
+                                                >
+                                                    <span class="skills-title">Hard Skills</span>
+                                                    <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="skills-collapse">
+                                                    <ul class="skills-list">
+                                                        <li>Python &amp; FastAPI</li>
+                                                        <li>SQLAlchemy &amp; PostgreSQL</li>
+                                                        <li>Alembic (migrações de banco)</li>
+                                                        <li>spaCy (processamento de linguagem natural)</li>
+                                                        <li>React, TypeScript &amp; Vite</li>
+                                                        <li>Leaflet (mapas interativos)</li>
+                                                        <li>Highcharts &amp; Chart.js</li>
+                                                        <li>ESP32 &amp; sensores IoT</li>
+                                                        <li>Docker</li>
+                                                    </ul>
+                                                </div>
 
-                                            <div class="skills-header" role="button" tabindex="0" aria-expanded="false">
-                                                <span class="skills-title">Soft Skills</span>
-                                                <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="skills-collapse">
-                                                <ul class="skills-list">
-                                                    <li><strong>Gestão de pessoas:</strong> Continuei atuando na mediação de conflitos e na organização do time, mantendo o grupo alinhado mesmo nos momentos de pressão.</li>
-                                                    <li><strong>Proatividade:</strong> Segui antecipando tarefas e problemas, assumindo iniciativas sem esperar cobrança e ajudando o time a manter o ritmo.</li>
-                                                    <li><strong>Resiliência:</strong> Mantive a constância diante das dificuldades, usando o aprendizado dos projetos anteriores para ajudar o grupo a não perder o foco.</li>
-                                                </ul>
+                                                <div
+                                                    class="skills-header"
+                                                    role="button"
+                                                    tabindex="0"
+                                                    aria-expanded="false"
+                                                >
+                                                    <span class="skills-title">Soft Skills</span>
+                                                    <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="skills-collapse">
+                                                    <ul class="skills-list">
+                                                        <li>
+                                                            <strong>Autonomia:</strong> Assumi as tarefas sem esperar
+                                                            cobrança ou direcionamento, tomando a iniciativa para manter
+                                                            o projeto andando.
+                                                        </li>
+                                                        <li>
+                                                            <strong>Resiliência:</strong> Mesmo com o grupo se
+                                                            desfazendo e uma sprint inteira sem equipe, mantive o
+                                                            compromisso até ser acolhido por outro grupo.
+                                                        </li>
+                                                        <li>
+                                                            <strong>Organização:</strong> Ao entrar em um grupo que já
+                                                            tinha quase tudo pronto, planejei e executei a maior parte
+                                                            da sprint final, garantindo a conclusão das entregas.
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
-                                                                            </div>
-                                    <div class="card-actions mt-auto">
-                                        <button class="btn-ver-mais" type="button" aria-expanded="false">
-                                            <span class="ver-mais-label">Ver mais</span>
-                                            <i class="bi bi-chevron-down" aria-hidden="true"></i>
-                                        </button>
-                                        <div class="d-flex gap-2">
-                                            <a href="https://github.com/IvanSuiyama/API_3_semestre_Portal_de_Transparencia" target="_blank"
-                                                class="btn btn-outline-primary">
-                                                <i class="bi bi-github"></i> GitHub
-                                            </a>
+                                        <div class="card-actions mt-auto">
+                                            <button class="btn-ver-mais" type="button" aria-expanded="false">
+                                                <span class="ver-mais-label">Ver mais</span>
+                                                <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="d-flex gap-2">
+                                                <a
+                                                    href="https://github.com/IvanSuiyama/API_4_semestre_Sistema_de_Controle_Estacao_Meteorologica"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    aria-label="Abrir o repositório do projeto Estação Meteorológica no GitHub (nova aba)"
+                                                    class="btn btn-outline-primary"
+                                                >
+                                                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card slide-up portfolio-card" data-delay="0.5">
+                                    <h3 class="card-title project-title-top">
+                                        API – 3º semestre · Portal de Transparência
+                                    </h3>
+                                    <img
+                                        src="static/img/portal.png"
+                                        class="card-img-top project-cover"
+                                        alt="Tela do Portal de Transparência"
+                                        loading="lazy"
+                                        decoding="async">
+                                    <div class="card-body">
+                                        <div class="tech-badges">
+                                            <span class="tech-badge" style="--tech: #3178c6"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/typescript/3178C6"
+                                                    alt=""
+                                                    loading="lazy">TypeScript</span
+                                            ><span class="tech-badge" style="--tech: #61dafb"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/react/61DAFB"
+                                                    alt=""
+                                                    loading="lazy">React</span
+                                            ><span class="tech-badge" style="--tech: #e76f00"
+                                                ><img
+                                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                                    alt=""
+                                                    loading="lazy">Java</span
+                                            ><span class="tech-badge" style="--tech: #6db33f"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/springboot/6DB33F"
+                                                    alt=""
+                                                    loading="lazy">Spring Boot</span
+                                            >
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Portal de Transparência</h4>
+                                            <h5 class="card-about-title">Sobre o projeto:</h5>
+                                            <p class="text-card-porti">
+                                                Plataforma web desenvolvida para atender às necessidades da Fundação
+                                                FAPG, promovendo a transparência pública de projetos, investimentos e
+                                                bolsistas e permitindo o acompanhamento e a fiscalização pela sociedade.
+                                                <span class="client-label">Empresa Parceira:</span>
+                                                <span class="client-name">FAPG</span>.
+                                            </p>
+
+                                            <h5 class="subtitle-card">Contribuições pessoais no projeto:</h5>
+                                            <ul class="skills-list contribution-list">
+                                                <li>
+                                                    Ciclo completo de cadastro de projetos: criação, edição e exclusão.
+                                                </li>
+                                                <li>
+                                                    Ciclo completo de cadastro de bolsistas: criação, edição e exclusão.
+                                                </li>
+                                                <li>Implementação de ocultação de campos.</li>
+                                                <li>Implementação da autenticação.</li>
+                                            </ul>
+                                            <div class="skills-section">
+                                                <div
+                                                    class="skills-header"
+                                                    role="button"
+                                                    tabindex="0"
+                                                    aria-expanded="false"
+                                                >
+                                                    <span class="skills-title">Hard Skills</span>
+                                                    <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="skills-collapse">
+                                                    <ul class="skills-list">
+                                                        <li>Java 17 &amp; Spring Boot</li>
+                                                        <li>Spring Data JPA &amp; Hibernate</li>
+                                                        <li>Spring Security &amp; JWT</li>
+                                                        <li>MySQL</li>
+                                                        <li>React &amp; TypeScript</li>
+                                                        <li>Bootstrap &amp; Chart.js</li>
+                                                        <li>jsPDF &amp; XLSX (exportação de relatórios)</li>
+                                                        <li>Selenium (web scraping)</li>
+                                                        <li>Maven</li>
+                                                    </ul>
+                                                </div>
+
+                                                <div
+                                                    class="skills-header"
+                                                    role="button"
+                                                    tabindex="0"
+                                                    aria-expanded="false"
+                                                >
+                                                    <span class="skills-title">Soft Skills</span>
+                                                    <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="skills-collapse">
+                                                    <ul class="skills-list">
+                                                        <li>
+                                                            <strong>Gestão de pessoas:</strong> Continuei atuando na
+                                                            mediação de conflitos e na organização do time, mantendo o
+                                                            grupo alinhado mesmo nos momentos de pressão.
+                                                        </li>
+                                                        <li>
+                                                            <strong>Proatividade:</strong> Segui antecipando tarefas e
+                                                            problemas, assumindo iniciativas sem esperar cobrança e
+                                                            ajudando o time a manter o ritmo.
+                                                        </li>
+                                                        <li>
+                                                            <strong>Resiliência:</strong> Mantive a constância diante
+                                                            das dificuldades, usando o aprendizado dos projetos
+                                                            anteriores para ajudar o grupo a não perder o foco.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-actions mt-auto">
+                                            <button class="btn-ver-mais" type="button" aria-expanded="false">
+                                                <span class="ver-mais-label">Ver mais</span>
+                                                <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="d-flex gap-2">
+                                                <a
+                                                    href="https://github.com/IvanSuiyama/API_3_semestre_Portal_de_Transparencia"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    aria-label="Abrir o repositório do projeto Portal de Transparência no GitHub (nova aba)"
+                                                    class="btn btn-outline-primary"
+                                                >
+                                                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- fim linha 2 -->
 
-                    </div> <!-- fim linha 2 -->
+                        <!-- Linha 3: Sistema de Chamados + Banco C3 -->
+                        <div class="row row-cols-1 row-cols-md-2 g-4 mt-4 align-items-start">
+                            <div class="col">
+                                <div class="card slide-up portfolio-card" data-delay="0.6">
+                                    <h3 class="card-title project-title-top">API – 2º semestre · Internet Ocean</h3>
+                                    <img
+                                        src="static/img/foto-api2.jpg"
+                                        class="card-img-top project-cover"
+                                        alt="Tela do Sistema de Gerenciamento de Chamados"
+                                        loading="lazy"
+                                        decoding="async">
+                                    <div class="card-body">
+                                        <div class="tech-badges">
+                                            <span class="tech-badge" style="--tech: #3178c6"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/typescript/3178C6"
+                                                    alt=""
+                                                    loading="lazy">TypeScript</span
+                                            ><span class="tech-badge" style="--tech: #61dafb"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/react/61DAFB"
+                                                    alt=""
+                                                    loading="lazy">React</span
+                                            ><span class="tech-badge" style="--tech: #4479a1"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/mysql/4479A1"
+                                                    alt=""
+                                                    loading="lazy">MySQL</span
+                                            ><span class="tech-badge" style="--tech: #f7df1e"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/javascript/F7DF1E"
+                                                    alt=""
+                                                    loading="lazy">JavaScript</span
+                                            >
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Sistema de Gerenciamento de Chamados</h4>
+                                            <h5 class="card-about-title">Sobre o projeto:</h5>
+                                            <p class="text-card-porti">
+                                                Sistema corporativo web para gerenciamento e triagem de chamados de
+                                                suporte técnico, com fluxos específicos para clientes, equipe técnica e
+                                                administradores. <span class="client-label">Cliente Interno:</span>
+                                                <span class="client-name">FATEC</span>.
+                                            </p>
 
-                    <!-- Linha 3: Sistema de Chamados + Banco C3 -->
-                    <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+                                            <h5 class="subtitle-card">Contribuições pessoais no projeto:</h5>
+                                            <ul class="skills-list contribution-list">
+                                                <li>Desenvolvimento do backend.</li>
+                                                <li>Criação de funções e classes.</li>
+                                                <li>Desenvolvimento e estruturação do banco de dados.</li>
+                                                <li>Implementação de recuperação de senha.</li>
+                                                <li>Implementação de envio de e-mail.</li>
+                                            </ul>
+                                            <div class="skills-section">
+                                                <div
+                                                    class="skills-header"
+                                                    role="button"
+                                                    tabindex="0"
+                                                    aria-expanded="false"
+                                                >
+                                                    <span class="skills-title">Hard Skills</span>
+                                                    <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="skills-collapse">
+                                                    <ul class="skills-list">
+                                                        <li>Node.js &amp; TypeScript</li>
+                                                        <li>React</li>
+                                                        <li>MySQL</li>
+                                                        <li>APIs REST</li>
+                                                        <li>Modelagem de banco de dados</li>
+                                                        <li>Autenticação e recuperação de senha</li>
+                                                        <li>Envio de e-mails automatizados</li>
+                                                        <li>Git &amp; Scrum</li>
+                                                    </ul>
+                                                </div>
 
-                        <div class="col">
-                            <div class="card h-100 slide-up portfolio-card" data-delay="0.6">
-                                <h5 class="card-title project-title-top">API 2° Semestre - Internet Ocean</h5>
-                                <img src="static/img/foto-api2.jpg" class="card-img-top"
-                                    alt="Sistema de Gerenciamento de Chamados"
-                                    style="object-fit:cover; width:100%; height:250px;">
-                                <div class="card-body">
-                                    <div class="tech-badges"><span class="tech-badge" style="--tech:#3178C6"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" loading="lazy">TypeScript</span><span class="tech-badge" style="--tech:#61DAFB"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="" loading="lazy">React</span><span class="tech-badge" style="--tech:#4479A1"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="" loading="lazy">MySQL</span><span class="tech-badge" style="--tech:#F7DF1E"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="" loading="lazy">JavaScript</span></div>
-                                    <div class="card-content">
-                                        <h5 class="card-title">Sistema de Gerenciamento de Chamados</h5>
-                                        <h4 class="card-about-title">Sobre o projeto:</h4>
-                                        <p class="text-card-porti">Sistema corporativo web para gerenciamento e triagem de chamados de suporte técnico, com fluxos dedicados e práticos para clientes, equipe técnica e administradores, <span class="client-label">Cliente Interno:</span> <span class="client-name">FATEC</span>.</p>
-
-                                                                                <h3 class="subtitle-card">Contribuições pessoais no projeto:</h3>
-                                        <ul class="skills-list contribution-list">
-                                            <li>Desenvolvimento do backend.</li>
-                                            <li>Criação de funções e classes.</li>
-                                            <li>Desenvolvimento/estruturação do banco de dados.</li>
-                                            <li>Implementação de recuperação de senha.</li>
-                                            <li>Implementação de envio de e-mail.</li>
-                                        </ul>
-<div class="skills-section">
-                                            <div class="skills-header" role="button" tabindex="0" aria-expanded="false">
-                                                <span class="skills-title">Hard Skills</span>
-                                                <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="skills-collapse">
-                                                <ul class="skills-list">
-                                                    <li>Node.js &amp; TypeScript</li>
-                                                    <li>React</li>
-                                                    <li>MySQL</li>
-                                                    <li>APIs REST</li>
-                                                    <li>Modelagem de banco de dados</li>
-                                                    <li>Autenticação e recuperação de senha</li>
-                                                    <li>Envio de e-mails automatizados</li>
-                                                    <li>Git &amp; Scrum</li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="skills-header" role="button" tabindex="0" aria-expanded="false">
-                                                <span class="skills-title">Soft Skills</span>
-                                                <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="skills-collapse">
-                                                <ul class="skills-list">
-                                                    <li><strong>Gestão de pessoas e conflitos:</strong> Como Scrum Master, conduzi conversas diretas com o time para resolver intrigas e alinhar expectativas, priorizando um ambiente saudável.</li>
-                                                    <li><strong>Proatividade:</strong> Passei a antecipar problemas e agir antes de ser cobrado, propondo soluções e apoiando o grupo nas entregas.</li>
-                                                    <li><strong>Resiliência:</strong> Mantive o foco e a postura profissional nos momentos de tensão, ajudando o time a continuar entregando mesmo diante dos conflitos.</li>
-                                                </ul>
+                                                <div
+                                                    class="skills-header"
+                                                    role="button"
+                                                    tabindex="0"
+                                                    aria-expanded="false"
+                                                >
+                                                    <span class="skills-title">Soft Skills</span>
+                                                    <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="skills-collapse">
+                                                    <ul class="skills-list">
+                                                        <li>
+                                                            <strong>Gestão de pessoas e conflitos:</strong> Como Scrum
+                                                            Master, conduzi conversas diretas com o time para resolver
+                                                            intrigas e alinhar expectativas, priorizando um ambiente
+                                                            saudável.
+                                                        </li>
+                                                        <li>
+                                                            <strong>Proatividade:</strong> Passei a antecipar problemas
+                                                            e agir antes de ser cobrado, propondo soluções e apoiando o
+                                                            grupo nas entregas.
+                                                        </li>
+                                                        <li>
+                                                            <strong>Resiliência:</strong> Mantive o foco e a postura
+                                                            profissional nos momentos de tensão, ajudando o time a
+                                                            continuar entregando mesmo diante dos conflitos.
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
-                                                                            </div>
-                                    <div class="card-actions mt-auto">
-                                        <button class="btn-ver-mais" type="button" aria-expanded="false">
-                                            <span class="ver-mais-label">Ver mais</span>
-                                            <i class="bi bi-chevron-down" aria-hidden="true"></i>
-                                        </button>
-                                        <div class="d-flex gap-2">
-                                            <a href="https://github.com/IvanSuiyama/API_2_semestre_Internet_Ocean" target="_blank"
-                                                class="btn btn-outline-primary">
-                                                <i class="bi bi-github"></i> GitHub
-                                            </a>
+                                        <div class="card-actions mt-auto">
+                                            <button class="btn-ver-mais" type="button" aria-expanded="false">
+                                                <span class="ver-mais-label">Ver mais</span>
+                                                <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="d-flex gap-2">
+                                                <a
+                                                    href="https://github.com/IvanSuiyama/API_2_semestre_Internet_Ocean"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    aria-label="Abrir o repositório do projeto Internet Ocean no GitHub (nova aba)"
+                                                    class="btn btn-outline-primary"
+                                                >
+                                                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card slide-up portfolio-card" data-delay="0.7">
+                                    <h3 class="card-title project-title-top">API – 1º semestre · C3 Banking</h3>
+                                    <img
+                                        src="static/img/imagemC3.png"
+                                        class="card-img-top project-cover"
+                                        alt="Tela do Internet Banking Simulado C3"
+                                        loading="lazy"
+                                        decoding="async">
+                                    <div class="card-body">
+                                        <div class="tech-badges">
+                                            <span class="tech-badge" style="--tech: #3776ab"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/python/3776AB"
+                                                    alt=""
+                                                    loading="lazy">Python</span
+                                            ><span class="tech-badge" style="--tech: #e6edf3"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/flask/E6EDF3"
+                                                    alt=""
+                                                    loading="lazy">Flask</span
+                                            ><span class="tech-badge" style="--tech: #cc6699"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/sass/CC6699"
+                                                    alt=""
+                                                    loading="lazy">Sass</span
+                                            ><span class="tech-badge" style="--tech: #4479a1"
+                                                ><img
+                                                    src="https://cdn.simpleicons.org/mysql/4479A1"
+                                                    alt=""
+                                                    loading="lazy">MySQL</span
+                                            >
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Internet Banking Simulado C3</h4>
+                                            <h5 class="card-about-title">Sobre o projeto:</h5>
+                                            <p class="text-card-porti">
+                                                Aplicação web desenvolvida para simular as principais funcionalidades de
+                                                um internet banking, incluindo operações financeiras como consulta de
+                                                saldo, extrato, saques, depósitos e transferências.
+                                                <span class="client-label">Cliente Interno:</span>
+                                                <span class="client-name">FATEC</span>.
+                                            </p>
+
+                                            <h5 class="subtitle-card">Contribuições pessoais no projeto:</h5>
+                                            <ul class="skills-list contribution-list">
+                                                <li>Suporte ao projeto, auxiliando na correção de funções menores.</li>
+                                                <li>Correções no backend e no frontend.</li>
+                                                <li>
+                                                    Contribuição para a estabilidade e o funcionamento geral da
+                                                    aplicação.
+                                                </li>
+                                            </ul>
+                                            <div class="skills-section">
+                                                <div
+                                                    class="skills-header"
+                                                    role="button"
+                                                    tabindex="0"
+                                                    aria-expanded="false"
+                                                >
+                                                    <span class="skills-title">Hard Skills</span>
+                                                    <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="skills-collapse">
+                                                    <ul class="skills-list">
+                                                        <li>Python &amp; Flask</li>
+                                                        <li>Jinja2</li>
+                                                        <li>MySQL &amp; PyMySQL</li>
+                                                        <li>Sass / SCSS</li>
+                                                        <li>APScheduler (rotinas agendadas)</li>
+                                                        <li>HTML &amp; CSS</li>
+                                                        <li>Git</li>
+                                                        <li>Lógica de programação</li>
+                                                    </ul>
+                                                </div>
+
+                                                <div
+                                                    class="skills-header"
+                                                    role="button"
+                                                    tabindex="0"
+                                                    aria-expanded="false"
+                                                >
+                                                    <span class="skills-title">Soft Skills</span>
+                                                    <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="skills-collapse">
+                                                    <ul class="skills-list">
+                                                        <li>
+                                                            <strong>Resiliência:</strong> Aceitei a mudança de papel no
+                                                            grupo e o distanciamento inicial sem desistir da entrega.
+                                                        </li>
+                                                        <li>
+                                                            <strong>Persistência:</strong> Continuei me colocando à
+                                                            disposição e correndo atrás de tarefas mesmo quando o time
+                                                            já estava organizado sem mim.
+                                                        </li>
+                                                        <li>
+                                                            <strong>Amadurecimento:</strong> Aprendi a lidar com a
+                                                            frustração, manter a postura profissional e transformar a
+                                                            experiência em evolução pessoal.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-actions mt-auto">
+                                            <button class="btn-ver-mais" type="button" aria-expanded="false">
+                                                <span class="ver-mais-label">Ver mais</span>
+                                                <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="d-flex gap-2">
+                                                <a
+                                                    href="https://github.com/IvanSuiyama/API_1_semestre_C3_Banking"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    aria-label="Abrir o repositório do projeto C3 Banking no GitHub (nova aba)"
+                                                    class="btn btn-outline-primary"
+                                                >
+                                                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col">
-                            <div class="card h-100 slide-up portfolio-card" data-delay="0.7">
-                                <h5 class="card-title project-title-top">API 1° Semestre - C3 Banking</h5>
-                                <img src="static/img/imagemC3.png" class="card-img-top"
-                                    alt="Internet Banking Simulado C3"
-                                    style="object-fit:cover; object-position: center; width:100%; height:250px;">
-                                <div class="card-body">
-                                    <div class="tech-badges"><span class="tech-badge" style="--tech:#3776AB"><img src="https://cdn.simpleicons.org/python/3776AB" alt="" loading="lazy">Python</span><span class="tech-badge" style="--tech:#E6EDF3"><img src="https://cdn.simpleicons.org/flask/E6EDF3" alt="" loading="lazy">Flask</span><span class="tech-badge" style="--tech:#CC6699"><img src="https://cdn.simpleicons.org/sass/CC6699" alt="" loading="lazy">Sass</span><span class="tech-badge" style="--tech:#4479A1"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="" loading="lazy">MySQL</span></div>
-                                    <div class="card-content">
-                                        <h5 class="card-title">Internet Banking Simulado C3</h5>
-                                        <h4 class="card-about-title">Sobre o projeto:</h4>
-                                        <p class="text-card-porti">Aplicação web desenvolvida com a finalidade de simular as principais funcionalidades de um internet banking, incluindo operações financeiras como consulta de saldo, extrato, saques, depósitos e transferências, <span class="client-label">Cliente Interno:</span> <span class="client-name">FATEC</span>.</p>
-
-                                                                                <h3 class="subtitle-card">Contribuições pessoais no projeto:</h3>
-                                        <ul class="skills-list contribution-list">
-                                            <li>Suporte ao projeto, auxiliando e corrigindo funções menores.</li>
-                                            <li>Correções no backend e no frontend.</li>
-                                            <li>Contribuição para a estabilidade e o funcionamento geral da aplicação.</li>
-                                        </ul>
-<div class="skills-section">
-                                            <div class="skills-header" role="button" tabindex="0" aria-expanded="false">
-                                                <span class="skills-title">Hard Skills</span>
-                                                <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="skills-collapse">
-                                                <ul class="skills-list">
-                                                    <li>Python &amp; Flask</li>
-                                                    <li>Jinja2</li>
-                                                    <li>MySQL &amp; PyMySQL</li>
-                                                    <li>Sass / SCSS</li>
-                                                    <li>APScheduler (rotinas agendadas)</li>
-                                                    <li>HTML &amp; CSS</li>
-                                                    <li>Git</li>
-                                                    <li>Lógica de programação</li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="skills-header" role="button" tabindex="0" aria-expanded="false">
-                                                <span class="skills-title">Soft Skills</span>
-                                                <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="skills-collapse">
-                                                <ul class="skills-list">
-                                                    <li><strong>Resiliência:</strong> Aceitei a mudança de papel no grupo e o distanciamento inicial sem desistir da entrega.</li>
-                                                    <li><strong>Persistência:</strong> Continuei me colocando à disposição e correndo atrás de tarefas mesmo quando o time já estava organizado sem mim.</li>
-                                                    <li><strong>Amadurecimento:</strong> Aprendi a lidar com a frustração, manter a postura profissional e transformar a experiência em evolução pessoal.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                                                            </div>
-                                    <div class="card-actions mt-auto">
-                                        <button class="btn-ver-mais" type="button" aria-expanded="false">
-                                            <span class="ver-mais-label">Ver mais</span>
-                                            <i class="bi bi-chevron-down" aria-hidden="true"></i>
-                                        </button>
-                                        <div class="d-flex gap-2">
-                                            <a href="https://github.com/IvanSuiyama/API_1_semestre_C3_Banking" target="_blank"
-                                                class="btn btn-outline-primary">
-                                                <i class="bi bi-github"></i> GitHub
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div> <!-- fim linha 3 -->
+                        <!-- fim linha 3 -->
+                    </div>
                 </div>
+            </section>
+
+            <div class="code-divider" aria-hidden="true">
+                <span class="code-divider-prompt">&lt;</span>
+                <span class="code-divider-typed" data-text="Profissionais e Pessoais"></span>
+                <span class="code-divider-prompt">&gt;</span>
             </div>
-        </section>
 
-        <div class="code-divider" aria-hidden="true"><span class="code-divider-prompt">&lt;</span><span class="code-divider-typed" data-text="Projetos Pessoais"></span><span class="code-divider-prompt">&gt;</span></div>
+            <section id="projetos-pessoais" class="mt-5 section-bg">
+                <div class="container pb-5 pt-5">
+                    <div class="container">
+                        <h2 class="projetos-group-title">Projetos Profissionais</h2>
 
-        <section id="projetos-pessoais" class="mt-5 section-bg">
-            <div class="container pb-5 pt-5">
-                <h2 class="pb-4">Projetos Pessoais</h2>
-
-                <div class="container">
-                    <!-- Linha 1: App de Tarefas + Baixador de Músicas -->
-                    <div class="row row-cols-1 row-cols-md-2 g-4">
-
-                        <div class="col">
-                            <div class="card h-100 slide-up portfolio-card" data-delay="0">
-                                <h5 class="card-title project-title-top">Noiton 2</h5>
-                                <div class="card-img-top"
-                                    style="width:100%; height:250px; min-height:250px; display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:2px; background:#000; overflow:hidden;">
-                                    <div class="app-screenshot-container">
-                                        <img src="static/img/app1.jpeg" alt="App screenshot 1">
-                                    </div>
-                                    <div class="app-screenshot-container">
-                                        <img src="static/img/app2.jpeg" alt="App screenshot 2">
-                                    </div>
-                                    <div class="app-screenshot-container">
-                                        <img src="static/img/app3.jpeg" alt="App screenshot 3">
-                                    </div>
-                                    <div class="app-screenshot-container">
-                                        <img src="static/img/app5.jpeg" alt="App screenshot 5">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="card-content">
-                                    <h5 class="card-title">Aplicativo de Gerenciamento e Compartilhamento de Tarefas</h5>
-                                    <p class="card-text">Aplicativo de compartilhamento de tarefas desenvolvido para
-                                        facilitar a organização individual e em equipe, com funções avançadas para quem
-                                        busca um app completo.</p>
-                                    <div>
-                                        <h3 class="subtitle-card">Contribuições pessoais no projeto:</h3>
-                                        <p class="text-card-porti">Desenvolvido inteiramente por mim. Destaques: criação
-                                            de tarefa por voz com IA, cache offline, login com Google, loja de temas e
-                                            avatares como recompensa por tarefas concluídas.</p>
-                                        <div class="tech-badges"><span class="tech-badge" style="--tech:#339933"><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="" loading="lazy">Node.js</span><span class="tech-badge" style="--tech:#61DAFB"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="" loading="lazy">React Native</span><span class="tech-badge" style="--tech:#E76F00"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="" loading="lazy">Módulos nativos em Java</span></div>
-                                        <div class="skills-section">
-                                            <div class="skills-header" role="button" tabindex="0" aria-expanded="false">
-                                                <span class="skills-title">Hard Skills</span>
-                                                <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="skills-collapse">
-                                                <ul class="skills-list">
-                                                    <li>React Native &amp; TypeScript</li>
-                                                    <li>Módulos nativos Android em Java</li>
-                                                    <li>Node.js &amp; Express.js</li>
-                                                    <li>PostgreSQL</li>
-                                                    <li>SQLite (cache offline)</li>
-                                                    <li>JWT &amp; OAuth 2.0 (login com Google)</li>
-                                                    <li>Firebase Cloud Messaging (push notifications)</li>
-                                                    <li>Google Calendar API</li>
-                                                    <li>IA para criação de tarefas por voz</li>
-                                                </ul>
+                        <!-- Matriculei (projeto profissional) -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card slide-up portfolio-card matriculei-card" data-delay="0">
+                                    <h3 class="card-title project-title-top">Matriculei</h3>
+                                    <img src="static/img/matriculei-dashboard.png" class="card-img-top project-cover"
+                                        alt="Dashboard do Matriculei com o resumo de matrículas e receita"
+                                        loading="lazy" decoding="async">
+                                    <div class="card-body">
+                                        <div class="tech-badges">
+                                            <span class="tech-badge" style="--tech: #61dafb"><img
+                                                    src="https://cdn.simpleicons.org/react/61DAFB" alt=""
+                                                    loading="lazy">React</span>
+                                            <span class="tech-badge" style="--tech: #3178c6"><img
+                                                    src="https://cdn.simpleicons.org/typescript/3178C6" alt=""
+                                                    loading="lazy">TypeScript</span>
+                                            <span class="tech-badge" style="--tech: #646cff"><img
+                                                    src="https://cdn.simpleicons.org/vite/646CFF" alt=""
+                                                    loading="lazy">Vite</span>
+                                            <span class="tech-badge" style="--tech: #339933"><img
+                                                    src="https://cdn.simpleicons.org/nodedotjs/339933" alt=""
+                                                    loading="lazy">Node.js</span>
+                                            <span class="tech-badge" style="--tech: #e6edf3"><img
+                                                    src="https://cdn.simpleicons.org/express/E6EDF3" alt=""
+                                                    loading="lazy">Express</span>
+                                            <span class="tech-badge" style="--tech: #4169e1"><img
+                                                    src="https://cdn.simpleicons.org/postgresql/4169E1" alt=""
+                                                    loading="lazy">PostgreSQL</span>
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Sistema de gestão e controle de matrículas</h4>
+                                            <h5 class="card-about-title">Sobre o projeto:</h5>
+                                            <p class="text-card-porti">
+                                                Plataforma web de gestão comercial para instituições de ensino, com
+                                                controle de matrículas, equipes, vendedores, metas, ranking e relatórios
+                                                em um painel centralizado com indicadores em tempo real. O sistema conta
+                                                com autenticação, controle de permissões e suporte a múltiplas unidades.
+                                            </p>
+                                            <h5 class="subtitle-card">Contribuições pessoais no projeto:</h5>
+                                            <ul class="skills-list contribution-list">
+                                                <li>
+                                                    Desenvolvimento solo do projeto, sem equipe de desenvolvimento,
+                                                    atuando de ponta a ponta no frontend e no backend.
+                                                </li>
+                                                <li>
+                                                    Apoio do gestor na definição de requisitos, prioridades e validação
+                                                    das entregas.
+                                                </li>
+                                                <li>
+                                                    Implementação dos módulos de matrículas, equipes, vendedores, metas e
+                                                    relatórios.
+                                                </li>
+                                                <li>Construção da API REST, autenticação e controle de permissões.</li>
+                                                <li>Manutenção e evolução contínua do sistema em produção.</li>
+                                            </ul>
+                                            <div class="skills-section">
+                                                <div class="skills-header" role="button" tabindex="0"
+                                                    aria-expanded="false">
+                                                    <span class="skills-title">Hard Skills</span>
+                                                    <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="skills-collapse">
+                                                    <ul class="skills-list">
+                                                        <li>React &amp; TypeScript</li>
+                                                        <li>Node.js &amp; Express</li>
+                                                        <li>PostgreSQL &amp; Prisma</li>
+                                                        <li>Vite</li>
+                                                        <li>Desenvolvimento de APIs REST</li>
+                                                        <li>Autenticação e controle de permissões</li>
+                                                        <li>Modelagem de dados</li>
+                                                        <li>Git e versionamento</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="skills-header" role="button" tabindex="0"
+                                                    aria-expanded="false">
+                                                    <span class="skills-title">Soft Skills</span>
+                                                    <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="skills-collapse">
+                                                    <ul class="skills-list">
+                                                        <li>
+                                                            <strong>Autonomia:</strong> Desenvolvi o projeto de ponta a
+                                                            ponta, tomando decisões técnicas e conduzindo as entregas.
+                                                        </li>
+                                                        <li>
+                                                            <strong>Organização:</strong> Priorizei funcionalidades e
+                                                            mantive a evolução do sistema estruturada.
+                                                        </li>
+                                                        <li>
+                                                            <strong>Comunicação:</strong> Alinhei requisitos, prazos e
+                                                            prioridades com o gestor responsável.
+                                                        </li>
+                                                        <li>
+                                                            <strong>Atenção aos detalhes:</strong> Cuidei da consistência
+                                                            da interface e da experiência de uso.
+                                                        </li>
+                                                        <li>
+                                                            <strong>Resiliência:</strong> Mantive o sistema evoluindo e
+                                                            corrigindo problemas em produção.
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="skills-section">
-                                            <div class="skills-header" role="button" tabindex="0" aria-expanded="false">
-                                                <span class="skills-title">Soft Skills</span>
-                                                <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="skills-collapse">
-                                                <ul class="skills-list">
-                                                    <li><strong>Autonomia:</strong> Desenvolvi o projeto do zero sozinho, assumindo as decisões técnicas e de produto.</li>
-                                                    <li><strong>Proatividade:</strong> Identifiquei necessidades e implementei melhorias sem esperar direcionamento, antecipando problemas e propondo soluções.</li>
-                                                    <li><strong>Organização:</strong> Planejei as etapas, priorizei funcionalidades e mantive o projeto estruturado até a entrega.</li>
-                                                </ul>
+                                        <div class="card-actions mt-auto">
+                                            <button class="btn-ver-mais" type="button" aria-expanded="false">
+                                                <span class="ver-mais-label">Ver mais</span>
+                                                <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="d-flex gap-2">
+                                                <a href="https://matriculei.com.br/" target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="btn btn-outline-primary matriculei-site-link"
+                                                    aria-label="Acesse o Site do Matriculei (abre em nova aba)">
+                                                    <img src="static/img/matriculei-favicon.png" alt=""
+                                                        class="btn-brand-icon" loading="lazy" decoding="async">
+                                                    <span class="matriculei-site-label">Acesse o Site</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
-                                    </div>
-                                <div class="card-actions mt-auto">
-                                    <button class="btn-ver-mais" type="button" aria-expanded="false">
-                                        <span class="ver-mais-label">Ver mais</span>
-                                        <i class="bi bi-chevron-down" aria-hidden="true"></i>
-                                    </button>
-                                    <div class="d-flex gap-2">
-                                        <a href="https://github.com/IvanSuiyama/Noiton2.0" target="_blank"
-                                            class="btn btn-outline-primary">
-                                            <i class="bi bi-github"></i> GitHub
-                                        </a>
-                                    </div>
-                                </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col">
-                            <div class="card h-100 slide-up portfolio-card" data-delay="0.1">
-                                <h5 class="card-title project-title-top">Baixador de Músicas</h5>
-                                <img src="static/img/baixador.jpeg" class="card-img-top"
-                                    alt="Baixador de Músicas Android"
-                                    style="object-fit:cover; width:100%; height:250px;">
-                                <div class="card-body">
-                                    <div class="card-content">
-                                    <h5 class="card-title">Baixador de Músicas Android</h5>
-                                    <p class="card-text">Aplicativo Android desenvolvido inteiramente em Python com
-                                        Kivy. Baixa áudio do YouTube e salva na pasta Music do dispositivo.</p>
-                                    <div>
-                                        <h3 class="subtitle-card">Destaques técnicos</h3>
-                                        <p class="text-card-porti">Contorna as restrições de armazenamento do Android
-                                            10+ usando a MediaStore API via chamadas Java nativas através do jnius.
-                                            Interface no tema hacker com fundo preto e letras verdes.</p>
-                                        <div class="tech-badges"><span class="tech-badge" style="--tech:#3776AB"><img src="https://cdn.simpleicons.org/python/3776AB" alt="" loading="lazy">Python</span><span class="tech-badge" style="--tech:#3776AB"><i class="bi bi-filetype-py"></i>Kivy</span><span class="tech-badge" style="--tech:#FF0033"><i class="bi bi-youtube"></i>yt-dlp</span><span class="tech-badge" style="--tech:#F5A623"><i class="bi bi-box-seam"></i>Buildozer</span><span class="tech-badge" style="--tech:#E76F00"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="" loading="lazy">jnius</span></div>
-                                        <div class="skills-section">
-                                            <div class="skills-header" role="button" tabindex="0" aria-expanded="false">
-                                                <span class="skills-title">Hard Skills</span>
-                                                <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="skills-collapse">
-                                                <ul class="skills-list">
-                                                    <li>Python 3.11</li>
-                                                    <li>Kivy 2.3</li>
-                                                    <li>yt-dlp com auto-update em runtime</li>
-                                                    <li>Buildozer</li>
-                                                    <li>python-for-android (p4a)</li>
-                                                    <li>Cython</li>
-                                                    <li>jnius (ponte Python ↔ Java)</li>
-                                                    <li>MediaStore API (Android 10+)</li>
-                                                    <li>Empacotamento e build de APK</li>
-                                                </ul>
-                                            </div>
+                        <h2 class="projetos-group-title mt-5">Projetos Pessoais</h2>
+                        <!-- Linha 1: App de Tarefas + Baixador de Músicas -->
+                        <div class="row row-cols-1 row-cols-md-2 g-4 align-items-start">
+                            <div class="col">
+                                <div class="card slide-up portfolio-card" data-delay="0">
+                                    <h3 class="card-title project-title-top">Noiton 2.0</h3>
+                                    <div class="card-img-top screenshot-grid screenshot-grid-4">
+                                        <div class="app-screenshot-container">
+                                            <img
+                                                src="static/img/app1.jpeg"
+                                                alt="Tela do aplicativo Noiton 2 — captura 1"
+                                                loading="lazy"
+                                                decoding="async">
                                         </div>
-                                        <div class="skills-section">
-                                            <div class="skills-header" role="button" tabindex="0" aria-expanded="false">
-                                                <span class="skills-title">Soft Skills</span>
-                                                <i class="bi bi-chevron-down skills-icon" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="skills-collapse">
-                                                <ul class="skills-list">
-                                                    <li><strong>Autonomia:</strong> Desenvolvi o projeto do zero sozinho, assumindo as decisões técnicas e de produto.</li>
-                                                    <li><strong>Proatividade:</strong> Identifiquei necessidades e implementei melhorias sem esperar direcionamento, antecipando problemas e propondo soluções.</li>
-                                                    <li><strong>Organização:</strong> Planejei as etapas, priorizei funcionalidades e mantive o projeto estruturado até a entrega.</li>
-                                                </ul>
-                                            </div>
+                                        <div class="app-screenshot-container">
+                                            <img
+                                                src="static/img/app2.jpeg"
+                                                alt="Tela do aplicativo Noiton 2 — captura 2"
+                                                loading="lazy"
+                                                decoding="async">
+                                        </div>
+                                        <div class="app-screenshot-container">
+                                            <img
+                                                src="static/img/app3.jpeg"
+                                                alt="Tela do aplicativo Noiton 2 — captura 3"
+                                                loading="lazy"
+                                                decoding="async">
+                                        </div>
+                                        <div class="app-screenshot-container">
+                                            <img
+                                                src="static/img/app5.jpeg"
+                                                alt="Tela do aplicativo Noiton 2 — captura 4"
+                                                loading="lazy"
+                                                decoding="async">
                                         </div>
                                     </div>
-                                    </div>
-                                <div class="card-actions mt-auto">
-                                    <button class="btn-ver-mais" type="button" aria-expanded="false">
-                                        <span class="ver-mais-label">Ver mais</span>
-                                        <i class="bi bi-chevron-down" aria-hidden="true"></i>
-                                    </button>
-                                    <div class="d-flex gap-2">
-                                        <a href="https://github.com/IvanSuiyama/music-downloader-android"
-                                            target="_blank" class="btn btn-outline-primary">
-                                            <i class="bi bi-github"></i> GitHub
-                                        </a>
+                                    <div class="card-body">
+                                        <div class="tech-badges">
+                                            <span class="tech-badge" style="--tech: #339933">
+                                                <img src="https://cdn.simpleicons.org/nodedotjs/339933" alt=""
+                                                    loading="lazy">Node.js
+                                            </span>
+                                            <span class="tech-badge" style="--tech: #61dafb">
+                                                <img src="https://cdn.simpleicons.org/react/61DAFB" alt=""
+                                                    loading="lazy">React Native
+                                            </span>
+                                            <span class="tech-badge" style="--tech: #e76f00">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                                    alt="" loading="lazy">Módulos nativos em Java
+                                            </span>
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">
+                                                Aplicativo de Gerenciamento e Compartilhamento de Tarefas
+                                            </h4>
+                                            <p class="card-text">
+                                                Aplicativo de gerenciamento e compartilhamento de tarefas desenvolvido
+                                                para facilitar a organização individual e em equipe, com recursos
+                                                avançados para quem busca uma solução completa.
+                                            </p>
+                                            <div>
+                                                <h5 class="subtitle-card">Contribuições pessoais no projeto:</h5>
+                                                <p class="text-card-porti">
+                                                    Desenvolvido inteiramente por mim, com destaque para a criação de
+                                                    tarefas por voz com IA, cache offline, login com Google, loja de
+                                                    temas e avatares como recompensa por tarefas concluídas.
+                                                </p>
+                                                <div class="skills-section">
+                                                    <div
+                                                        class="skills-header"
+                                                        role="button"
+                                                        tabindex="0"
+                                                        aria-expanded="false"
+                                                    >
+                                                        <span class="skills-title">Hard Skills</span>
+                                                        <i
+                                                            class="bi bi-chevron-down skills-icon"
+                                                            aria-hidden="true"
+                                                        ></i>
+                                                    </div>
+                                                    <div class="skills-collapse">
+                                                        <ul class="skills-list">
+                                                            <li>React Native &amp; TypeScript</li>
+                                                            <li>Módulos nativos Android em Java</li>
+                                                            <li>Node.js &amp; Express.js</li>
+                                                            <li>PostgreSQL</li>
+                                                            <li>SQLite (cache offline)</li>
+                                                            <li>JWT &amp; OAuth 2.0 (login com Google)</li>
+                                                            <li>Firebase Cloud Messaging (push notifications)</li>
+                                                            <li>Google Calendar API</li>
+                                                            <li>IA para criação de tarefas por voz</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="skills-section">
+                                                    <div
+                                                        class="skills-header"
+                                                        role="button"
+                                                        tabindex="0"
+                                                        aria-expanded="false"
+                                                    >
+                                                        <span class="skills-title">Soft Skills</span>
+                                                        <i
+                                                            class="bi bi-chevron-down skills-icon"
+                                                            aria-hidden="true"
+                                                        ></i>
+                                                    </div>
+                                                    <div class="skills-collapse">
+                                                        <ul class="skills-list">
+                                                            <li>
+                                                                <strong>Autonomia:</strong> Desenvolvi o projeto do zero
+                                                                sozinho, assumindo as decisões técnicas e de produto.
+                                                            </li>
+                                                            <li>
+                                                                <strong>Proatividade:</strong> Identifiquei necessidades
+                                                                e implementei melhorias sem esperar direcionamento,
+                                                                antecipando problemas e propondo soluções.
+                                                            </li>
+                                                            <li>
+                                                                <strong>Organização:</strong> Planejei as etapas,
+                                                                priorizei funcionalidades e mantive o projeto
+                                                                estruturado até a entrega.
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-actions mt-auto">
+                                            <button class="btn-ver-mais" type="button" aria-expanded="false">
+                                                <span class="ver-mais-label">Ver mais</span>
+                                                <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="d-flex gap-2">
+                                                <a
+                                                    href="https://github.com/IvanSuiyama/Noiton2.0"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    aria-label="Abrir o repositório do projeto Noiton 2.0 no GitHub (nova aba)"
+                                                    class="btn btn-outline-primary"
+                                                >
+                                                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card slide-up portfolio-card" data-delay="0.1">
+                                    <h3 class="card-title project-title-top">Baixador de Músicas</h3>
+                                    <img
+                                        src="static/img/baixador.jpeg"
+                                        class="card-img-top project-cover"
+                                        alt="Tela do aplicativo Baixador de Músicas"
+                                        loading="lazy"
+                                        decoding="async">
+                                    <div class="card-body">
+                                        <div class="tech-badges">
+                                            <span class="tech-badge" style="--tech: #3776ab">
+                                                <img src="https://cdn.simpleicons.org/python/3776AB" alt=""
+                                                    loading="lazy">Python
+                                            </span>
+                                            <span class="tech-badge" style="--tech: #3776ab">
+                                                <i class="bi bi-filetype-py" aria-hidden="true"></i>Kivy
+                                            </span>
+                                            <span class="tech-badge" style="--tech: #ff0033">
+                                                <i class="bi bi-youtube" aria-hidden="true"></i>yt-dlp
+                                            </span>
+                                            <span class="tech-badge" style="--tech: #f5a623">
+                                                <i class="bi bi-box-seam" aria-hidden="true"></i>Buildozer
+                                            </span>
+                                            <span class="tech-badge" style="--tech: #e76f00">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                                    alt="" loading="lazy">jnius
+                                            </span>
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Aplicativo Android para Download de Músicas</h4>
+                                            <p class="card-text">
+                                                Aplicativo Android desenvolvido inteiramente em Python com Kivy. Baixa
+                                                áudios do YouTube e os salva na pasta Music do dispositivo.
+                                            </p>
+                                            <div>
+                                                <h5 class="subtitle-card">Destaques técnicos</h5>
+                                                <p class="text-card-porti">
+                                                    Contorna as restrições de armazenamento do Android 10+ usando a
+                                                    MediaStore API por meio de chamadas Java nativas via jnius.
+                                                    Interface com tema hacker, fundo preto e letras verdes.
+                                                </p>
+                                                <div class="skills-section">
+                                                    <div
+                                                        class="skills-header"
+                                                        role="button"
+                                                        tabindex="0"
+                                                        aria-expanded="false"
+                                                    >
+                                                        <span class="skills-title">Hard Skills</span>
+                                                        <i
+                                                            class="bi bi-chevron-down skills-icon"
+                                                            aria-hidden="true"
+                                                        ></i>
+                                                    </div>
+                                                    <div class="skills-collapse">
+                                                        <ul class="skills-list">
+                                                            <li>Python 3.11</li>
+                                                            <li>Kivy 2.3</li>
+                                                            <li>yt-dlp com auto-update em runtime</li>
+                                                            <li>Buildozer</li>
+                                                            <li>python-for-android (p4a)</li>
+                                                            <li>Cython</li>
+                                                            <li>jnius (ponte Python ↔ Java)</li>
+                                                            <li>MediaStore API (Android 10+)</li>
+                                                            <li>Empacotamento e build de APK</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="skills-section">
+                                                    <div
+                                                        class="skills-header"
+                                                        role="button"
+                                                        tabindex="0"
+                                                        aria-expanded="false"
+                                                    >
+                                                        <span class="skills-title">Soft Skills</span>
+                                                        <i
+                                                            class="bi bi-chevron-down skills-icon"
+                                                            aria-hidden="true"
+                                                        ></i>
+                                                    </div>
+                                                    <div class="skills-collapse">
+                                                        <ul class="skills-list">
+                                                            <li>
+                                                                <strong>Autonomia:</strong> Desenvolvi o projeto do zero
+                                                                sozinho, assumindo as decisões técnicas e de produto.
+                                                            </li>
+                                                            <li>
+                                                                <strong>Proatividade:</strong> Identifiquei necessidades
+                                                                e implementei melhorias sem esperar direcionamento,
+                                                                antecipando problemas e propondo soluções.
+                                                            </li>
+                                                            <li>
+                                                                <strong>Organização:</strong> Planejei as etapas,
+                                                                priorizei funcionalidades e mantive o projeto
+                                                                estruturado até a entrega.
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-actions mt-auto">
+                                            <button class="btn-ver-mais" type="button" aria-expanded="false">
+                                                <span class="ver-mais-label">Ver mais</span>
+                                                <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                                            </button>
+                                            <div class="d-flex gap-2">
+                                                <a
+                                                    href="https://github.com/IvanSuiyama/music-downloader-android"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    aria-label="Abrir o repositório do projeto Baixador de Músicas no GitHub (nova aba)"
+                                                    class="btn btn-outline-primary"
+                                                >
+                                                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                    </div> <!-- fim linha 1 -->
+                        <!-- fim linha 1 -->
+                    </div>
                 </div>
-            </div>
-        </section>
-        </section>
+            </section>
+        </main>
 
-    </main>
-
-    <script src="static/Bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="static/script.js?v=13"></script>
-</body>
-
+        <script src="static/script.js?v=14"></script>
+    </body>
 </html>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 :root {
     --background-primary: #0d1117;
@@ -8,11 +8,48 @@
     --text-secondary: #8b949e;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-html, body{
+/* Link de atalho para navegação por teclado */
+.skip-link {
+    position: fixed;
+    top: -100px;
+    left: 1rem;
+    z-index: 10001;
+    padding: 0.6rem 1rem;
+    background-color: var(--highlight);
+    color: #0d1117;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 0 0 8px 8px;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+#main:focus {
+    outline: none;
+}
+
+/* Indicador de foco consistente para elementos interativos */
+.nav-link:focus-visible,
+.social-links a:focus-visible,
+#email-copy:focus-visible,
+.btn-ver-mais:focus-visible,
+.skills-header:focus-visible,
+.clickable-image:focus-visible,
+.btn:focus-visible,
+.menu-mobile:focus-visible {
+    outline: 2px solid var(--highlight);
+    outline-offset: 3px;
+}
+
+html,
+body {
     font-family: Ubuntu, Arial;
     width: 100%;
     height: 100%;
@@ -21,7 +58,7 @@ html, body{
     color: var(--text-primary);
 }
 
-#header{
+#header {
     position: fixed;
     top: 0;
     left: 0;
@@ -31,12 +68,14 @@ html, body{
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     width: 300px;
-    transition: all ease-in-out 0.5s;
+    transition:
+        left 0.35s ease,
+        visibility 0.35s ease;
     padding: 0 15px;
     z-index: 9997;
 }
 
-#header .profile img{
+#header .profile img {
     margin: 15px auto;
     display: block;
     width: 120px;
@@ -46,7 +85,7 @@ html, body{
     object-fit: cover;
 }
 
-#header .profile h1{
+#header .profile .profile-name {
     font-size: 24px;
     margin: 0;
     padding: 0;
@@ -55,35 +94,29 @@ html, body{
     color: var(--text-primary);
 }
 
-#header .profile .social-links a{
+#header .profile .social-links a {
     font-size: 1rem;
     background-color: var(--background-secondary);
     color: var(--text-primary);
     padding: 0.6rem;
     margin-right: 1rem;
+    border: 2px solid #4ea8de;
     border-radius: 50%;
     transition: 0.3s;
     text-decoration: none;
 }
 
-#header .profile .social-links a:hover{
-    background: var(--highlight);
-}
-
-/* Alterar a cor da borda dos ícones de GitHub e LinkedIn */
-#header .profile .social-links a {
-    border: 2px solid #4ea8de; /* Azul mais claro */
-}
-
 #header .profile .social-links a:hover {
-    border-color: #58a6ff; /* Azul de destaque no hover */
+    background: var(--highlight);
+    border-color: #58a6ff;
 }
 
-.nav-menu{
+.nav-menu {
     padding: 1.5rem 1rem;
 }
 
-.nav-menu a, .nav-menu a:focus{
+.nav-menu a,
+.nav-menu a:focus {
     display: flex;
     align-items: center;
     color: var(--text-secondary);
@@ -91,32 +124,34 @@ html, body{
     font-size: 15px;
 }
 
-.nav-menu a i, .nav-menu a:focus i{
+.nav-menu a i,
+.nav-menu a:focus i {
     font-size: 24px;
     padding-right: 0.8rem;
     color: #6f7180;
 }
 
-.nav-menu a:hover, 
-.nav-menu .active, 
-.nav-menu .active:focus, 
-.nav-menu li:hover > a{
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover > a {
     text-decoration: none;
     color: var(--text-primary);
 }
 
-.nav-menu a:hover i, 
-.nav-menu .active i, 
-.nav-menu .active:focus i, 
-.nav-menu li:hover > a i{
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover > a i {
     color: var(--highlight);
 }
 
-#main{
+#main {
     margin-left: 300px;
 }
 
 section#inicio {
+    position: relative;
     background-image: url("./img/fundo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -126,7 +161,7 @@ section#inicio {
     height: 100vh;
 }
 
-section#inicio h2{
+section#inicio h1 {
     font-family: "Courier New", Courier, monospace;
     font-size: clamp(2.5rem, 4.5vw, 5rem);
     line-height: 1.2;
@@ -138,16 +173,17 @@ section#inicio h2{
     letter-spacing: 2px;
 }
 
-section#inicio .hero-text{
+section#inicio .hero-text {
     align-items: flex-start !important;
     transition: transform 0.5s ease-in-out;
 }
 
-.menu-nav-active section#inicio .hero-text{
+.menu-nav-active section#inicio .hero-text,
+.menu-nav-active section#inicio div#arraste {
     transform: translateX(300px);
 }
 
-section#inicio span#subtitle{
+section#inicio span#subtitle {
     margin-right: 0;
     font-size: clamp(1rem, 1.5vw, 1.5rem);
     text-align: left;
@@ -159,15 +195,20 @@ section#inicio span#subtitle{
 }
 
 section#inicio div#arraste {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
     width: auto;
     max-width: 100%;
-    justify-content: flex-end;
-    text-align: right;
+    justify-content: flex-start;
+    text-align: left;
     font-size: clamp(0.72rem, 2.5vw, 0.95rem);
-    padding: 0 3px 17px 0;
+    padding: 0 0 17px 2.25rem;
+    transition: transform 0.5s ease-in-out;
 }
 
-section#inicio div#arraste a{
+section#inicio div#arraste a {
     text-decoration: none;
     color: var(--text-primary);
     font-weight: 600;
@@ -180,25 +221,30 @@ section#inicio div#arraste a{
     padding: 0.4rem 0.85rem;
     display: inline-flex;
     align-items: center;
-    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
 }
 
-section#inicio div#arraste a:hover{
+section#inicio div#arraste a:hover {
     color: var(--highlight);
     border-color: var(--highlight);
     background-color: rgba(88, 166, 255, 0.08);
 }
 
-i.menu-mobile{
+.menu-mobile {
     position: fixed;
     color: #fff;
     background-color: var(--background-secondary);
+    border: 0;
     right: 1rem;
     top: 1rem;
     font-size: 1.5rem;
+    line-height: 1;
     border-radius: 4rem;
     cursor: pointer;
-    z-index: 10;
+    z-index: 10000;
     width: 45px;
     height: 45px;
     display: none;
@@ -206,87 +252,90 @@ i.menu-mobile{
     align-items: center;
 }
 
-.menu-nav-active{
-    overflow: hidden;
-}
-
-.menu-nav-active #header{
+.menu-nav-active #header {
     left: 0;
 }
 
-@media (max-width: 1024px){
-    #header{
+@media (max-width: 1024px) {
+    #header {
         left: -300px;
+        visibility: hidden;
     }
-    i.menu-mobile{
+    .menu-nav-active {
+        overflow: hidden;
+    }
+    .menu-nav-active #header {
+        visibility: visible;
+    }
+    .menu-mobile {
         display: flex;
     }
-    section#inicio{
+    section#inicio {
         background-attachment: scroll;
         background-position: center;
     }
-    section#inicio h2{
+    section#inicio h1 {
         font-size: clamp(2.5rem, 5.5vw, 4rem);
     }
-    section#inicio span#subtitle{
+    section#inicio span#subtitle {
         margin-right: 0;
         font-size: clamp(0.95rem, 1.6vw, 1.25rem);
     }
-    #main{
+    #main {
         margin-left: 0;
     }
 }
 
-@media (max-width: 767px){
-    section#inicio h2{
+@media (max-width: 767px) {
+    section#inicio h1 {
         font-size: clamp(2.5rem, 9vw, 4rem);
     }
-    section#inicio span#subtitle{
+    section#inicio span#subtitle {
         font-size: clamp(1rem, 4vw, 1.25rem);
     }
 }
 
-@media (max-width: 400px){
-    section#inicio span#subtitle{
+@media (max-width: 400px) {
+    section#inicio span#subtitle {
         font-size: 0.85rem;
     }
 }
 
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
     width: 6px;
     height: 6px;
 }
 
-*::-webkit-scrollbar-track{
+*::-webkit-scrollbar-track {
     background: transparent;
 }
 
-*::-webkit-scrollbar-thumb{
+*::-webkit-scrollbar-thumb {
     background-color: #30363d;
     border-radius: 3px;
 }
 
-*::-webkit-scrollbar-thumb:hover{
+*::-webkit-scrollbar-thumb:hover {
     background-color: #484f58;
 }
 
-html{
+html {
     scrollbar-width: thin;
     scrollbar-color: #30363d transparent;
 }
 
-.section-bg{
+.section-bg {
     background-color: var(--background-primary);
 }
 
-.trajetoria .trajetoria-title{
+.trajetoria .trajetoria-title {
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 20px;
     color: var(--text-primary);
 }
 
-.trajetoria .trajetoria-item{
+.trajetoria .trajetoria-item {
     padding: 0 0 20px 20px;
     margin-top: -2px;
     border-left: 2px solid var(--highlight);
@@ -304,14 +353,15 @@ html{
 }
 
 .trajetoria .trajetoria-item h5 {
-    background-color: var(--background-secondary);
+    background-color: #1e242e;
+    color: var(--text-primary);
     padding: 5px 15px;
     display: inline-block;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.trajetoria .trajetoria-item::before{
+.trajetoria .trajetoria-item::before {
     content: "";
     position: absolute;
     top: 0;
@@ -323,7 +373,8 @@ html{
     border-radius: 50%;
 }
 
-.subtitle-card, .card-about-title {
+.subtitle-card,
+.card-about-title {
     font-size: 1.1rem;
     font-weight: 700;
     color: #ffffff;
@@ -347,69 +398,87 @@ html{
     color: var(--text-primary);
 }
 
-.text-card-porti{
+.text-card-porti {
     font-size: 15px;
 }
 
-/* ===== ESTILOS DO FORMULÁRIO DE CONTATO ===== */
-
-/* Mensagem de status (sucesso/erro) */
-.status-message {
-    margin-top: 1rem;
-    padding: 1rem;
-    border-radius: 8px;
-    display: none;
-    animation: slideDown 0.3s ease;
+/* Capa dos cards de projeto */
+.project-cover {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
-.status-message.show {
-    display: block;
+.project-cover--left {
+    object-position: left center;
 }
 
-.status-message.success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+/* Card do projeto profissional Matriculei */
+.matriculei-card {
+    width: 100%;
+    max-width: 820px;
+    margin: 0 auto;
 }
 
-.status-message.error {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
+.matriculei-card .text-card-porti,
+.matriculei-card .skills-list {
+    text-align: left;
 }
 
-/* Animação para a mensagem de status */
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+@media (max-width: 767px) {
+    .matriculei-card .project-cover {
+        object-position: 33% top;
     }
 }
 
-/* Botão de envio desabilitado */
-.btn-enviar:disabled {
-    cursor: not-allowed;
-    opacity: 0.6;
+.btn-brand-icon {
+    display: inline-block;
+    width: auto;
+    height: 1.15em;
+    vertical-align: -0.15em;
 }
 
-/* Estilo para o card de informações */
-#contato .info {
-    margin-top: 1rem;
+/* Texto do CTA com o gradiente da seta do favicon */
+.matriculei-site-label {
+    background-image: linear-gradient(
+        90deg,
+        #00e0f0 0%,
+        #0080f0 42%,
+        #5a00fc 74%,
+        #fb01fc 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 
-#contato .info p {
-    font-size: 0.95rem;
+.matriculei-site-link:hover .matriculei-site-label,
+.matriculei-site-link:focus-visible .matriculei-site-label,
+.matriculei-site-link:active .matriculei-site-label {
+    background-image: none;
+    color: #0d1117;
+    -webkit-text-fill-color: #0d1117;
 }
 
-/* Responsividade do formulário */
-@media (max-width: 768px) {
-    #contato .card {
-        padding: 2rem !important;
-    }
+/* Grade de capturas de tela dentro dos cards */
+.screenshot-grid {
+    display: grid;
+    gap: 2px;
+    width: 100%;
+    height: 250px;
+    min-height: 250px;
+    background: #000;
+    overflow: hidden;
+}
+
+.screenshot-grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.screenshot-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 /* Estilos para as imagens do app no portfólio */
@@ -447,21 +516,13 @@ html{
 
 /* ===== ANIMAÇÕES ===== */
 
-/* Fade in - aparecer gradualmente */
-.fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-}
-
 /* Slide up - deslizar de baixo para cima */
 .slide-up {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition:
+        opacity 0.8s ease-out,
+        transform 0.8s ease-out;
 }
 
 .slide-up.visible {
@@ -469,33 +530,13 @@ html{
     transform: translateY(0);
 }
 
-/* Zoom in - efeito de zoom na imagem */
-.zoom-in {
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.zoom-in.visible {
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* Barras de progresso - começa zeradas */
-.progress-bar {
-    width: 0 !important;
-    transition: width 1.5s ease-out;
-}
-
-.progress-bar.animate {
-    width: var(--target-width) !important;
-}
-
 /* Timeline do trajetória - linha animada */
 .trajetoria .trajetoria-item {
     opacity: 0;
     transform: translateX(-30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition:
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
 }
 
 .trajetoria .trajetoria-item.visible {
@@ -503,32 +544,15 @@ html{
     transform: translateX(0);
 }
 
-/* Efeito de digitação */
-.typewriter {
-    display: inline;
-}
-
-.typewriter-cursor {
-    display: inline-block;
-    width: 2px;
-    height: 1em;
-    background-color: rgba(0, 0, 0, 0.75);
-    margin-left: 2px;
-    animation: blink-caret 0.75s step-end infinite;
-    vertical-align: middle;
-}
-
+/* Cursor piscante usado nos divisores */
 @keyframes blink-caret {
-    from, to {
+    from,
+    to {
         opacity: 0;
     }
     50% {
         opacity: 1;
     }
-}
-
-.typewriter.finished .typewriter-cursor {
-    display: none;
 }
 
 /* Modal de imagem */
@@ -567,8 +591,11 @@ html{
     position: absolute;
     top: 15px;
     right: 35px;
+    background: transparent;
+    border: 0;
     color: #f1f1f1;
     font-size: 40px;
+    line-height: 1;
     font-weight: bold;
     cursor: pointer;
     z-index: 10001;
@@ -590,54 +617,9 @@ html{
     transform: scale(1.05);
 }
 
-/* Animações no formulário de contato */
-#contato .form-control:focus {
-    border-color: #149ddd;
-    box-shadow: 0 0 0 0.2rem rgba(20, 157, 221, 0.25);
-    transform: scale(1.02);
-    transition: all 0.3s ease;
-}
-
-#contato .btn-enviar {
-    transition: all 0.3s ease;
-}
-
-#contato .btn-enviar:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(20, 157, 221, 0.3);
-}
-
-#contato .btn-enviar:active {
-    transform: translateY(0);
-}
-
-/* Animação suave para inputs */
-#contato .form-control {
-    transition: all 0.3s ease;
-}
-
-/* Cards do portfólio com delays */
-.portfolio-card {
-    transition-delay: 0s;
-}
-
 /* Cor do texto nas seções Sobre e Trajetória */
-#sobre, #trajetoria {
-    color: var(--text-primary);
-}
-
-#trajetoria .trajetoria-item h5 {
-    background-color: #1e242e;
-    color: var(--text-primary);
-}
-
-#trajetoria .trajetoria-item {
-    border-left: 2px solid var(--highlight);
-}
-
-/* Ajuste para fundo e texto das informações do 'Sobre' */
-#sobre .list-group-item {
-    background-color: var(--background-secondary);
+#sobre,
+#trajetoria {
     color: var(--text-primary);
 }
 
@@ -671,13 +653,15 @@ html{
         inset 0 1px 0 rgba(255, 255, 255, 0.08),
         inset 0 -2px 6px rgba(0, 0, 0, 0.5),
         0 14px 30px rgba(0, 0, 0, 0.45);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 #sobre .sobre-card:hover {
     transform: translateY(-4px);
     box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
         inset 0 -2px 6px rgba(0, 0, 0, 0.5),
         0 18px 38px rgba(0, 0, 0, 0.55);
 }
@@ -692,7 +676,6 @@ html{
     text-align: justify;
 }
 
-
 /* Ajuste para os cards do portfólio */
 .portfolio-card {
     background-color: #1e242e; /* Cinza escuro mais claro */
@@ -700,42 +683,15 @@ html{
     border: 1px solid var(--background-secondary);
     border-radius: 12px;
     overflow: hidden;
-    transition: background-color 0.1s ease, box-shadow 0.1s ease; /* Reduzir o tempo de transição */
+    transition:
+        background-color 0.1s ease,
+        box-shadow 0.1s ease; /* Reduzir o tempo de transição */
 }
 
 .portfolio-card:hover {
     background-color: var(--background-secondary);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-
-/* Fundo da div externa ao formulário na seção de contato */
-#contato .card {
-    background-color: var(--background-primary);
-}
-
-/* Cor do botão de envio para verde */
-#contato .btn-enviar {
-    background-color: #28a745; /* Verde */
-    border-color: #28a745;
-}
-
-#contato .btn-enviar:hover {
-    background-color: #218838; /* Verde mais escuro no hover */
-    border-color: #1e7e34;
-}
-
-/* Garantir que o texto na div externa ao formulário seja branco */
-#contato .card {
-    color: var(--text-primary);
-}
-
-/* Destacar a borda do card na seção de contato */
-#contato .card {
-    border: 2px solid var(--highlight); /* Borda mais visível com a cor de destaque */
-}
-
-
-
 
 /* ===== HABILIDADES — CARDS ===== */
 #habilidades .skill-legend {
@@ -776,13 +732,15 @@ html{
         inset 0 1px 0 rgba(255, 255, 255, 0.08),
         inset 0 -2px 6px rgba(0, 0, 0, 0.5),
         0 14px 30px rgba(0, 0, 0, 0.45);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 #habilidades .skill-card:hover {
     transform: translateY(-4px);
     box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
         inset 0 -2px 6px rgba(0, 0, 0, 0.5),
         0 18px 38px rgba(0, 0, 0, 0.55);
 }
@@ -855,6 +813,15 @@ html{
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+/* Títulos internos dos grupos de projetos */
+.projetos-group-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 1.25rem;
+}
+
 /* Títulos centralizados nos projetos pessoais */
 #projetos-pessoais .project-title-top {
     justify-content: center;
@@ -868,17 +835,10 @@ html{
 /* Título do projeto abaixo das fotos */
 .portfolio-card .card-content .card-title {
     color: var(--highlight);
-    font-weight: 700;
-    margin-bottom: 1.1rem;
-}
-
-/* Título "Sobre o projeto:" em branco */
-.card-about-title {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #ffffff;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    line-height: 1.35;
+    margin-bottom: 1.1rem;
 }
 
 /* Seções de Hard Skills e Soft Skills com setinhas */
@@ -899,7 +859,7 @@ html{
     margin-bottom: 0.2rem;
     padding: 0.4rem 0.85rem;
     background: linear-gradient(145deg, #1a2029, #141a22);
-    border: 1px solid rgba(139, 148, 158, 0.30);
+    border: 1px solid rgba(139, 148, 158, 0.3);
     border-radius: 10px;
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.04),
@@ -918,19 +878,23 @@ html{
 .skills-header .skills-icon {
     font-size: 0.85rem;
     color: #8b949e;
-    transition: transform 0.25s ease, color 0.2s ease;
+    transition:
+        transform 0.25s ease,
+        color 0.2s ease;
 }
 
 .skills-collapse {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: max-height 0.35s ease, opacity 0.25s ease;
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease;
     padding-left: 0.25rem;
 }
 
 .skills-collapse.open {
-    max-height: 800px;
+    max-height: 2000px;
     opacity: 1;
     margin-top: 0.25rem;
     margin-bottom: 0.45rem;
@@ -974,12 +938,15 @@ html{
     border: 1px solid var(--tech, #8b949e);
     border-radius: 6px;
     background: transparent;
-    color: var(--tech, #e6edf3);
+    color: var(--text-primary);
     font-family: "Courier New", Courier, monospace;
     font-size: 0.8rem;
     font-weight: 600;
     line-height: 1.2;
-    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .tech-badge:hover {
@@ -1002,8 +969,23 @@ html{
 }
 
 .tech-badge i {
+    color: var(--tech, currentColor);
     font-size: 0.95rem;
     line-height: 1;
+}
+
+/* Link do GitHub nos cards (contraste AA sobre o fundo escuro) */
+.portfolio-card .btn-outline-primary {
+    color: var(--highlight);
+    border-color: var(--highlight);
+}
+
+.portfolio-card .btn-outline-primary:hover,
+.portfolio-card .btn-outline-primary:focus-visible,
+.portfolio-card .btn-outline-primary:active {
+    color: #0d1117;
+    background-color: var(--highlight);
+    border-color: var(--highlight);
 }
 
 /* Botões dos cards sempre alinhados no canto inferior direito */
@@ -1021,16 +1003,19 @@ html{
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: max-height 0.9s ease, opacity 0.5s ease;
+    transition:
+        max-height 0.9s ease,
+        opacity 0.5s ease;
 }
 
 .portfolio-card.expanded .card-content {
-    max-height: 1500px;
+    max-height: 5000px;
     opacity: 1;
 }
 
 .card-actions {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
@@ -1076,7 +1061,7 @@ html{
     font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 0.35em;
-    opacity: 0.65;
+    opacity: 0.8;
     user-select: none;
 }
 
@@ -1097,9 +1082,36 @@ html{
     min-width: 2ch;
 }
 
+@media (max-width: 767px) {
+    .code-divider {
+        gap: 0.4rem;
+        padding: 1.25rem 0.75rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+    }
+
+    .code-divider-typed {
+        letter-spacing: 0.03em;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 .code-divider-typed::after {
     content: "▌";
     margin-left: 1px;
     animation: blink-caret 1s step-end infinite;
 }
-

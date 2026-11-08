@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ivan Suiyama Silva">
+    <rect width="64" height="64" rx="14" fill="#0d1117"/>
+    <path d="M25 18 15 32l10 14" fill="none" stroke="#58a6ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M39 18l10 14-10 14" fill="none" stroke="#58a6ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M35 13 29 51" fill="none" stroke="#8b949e" stroke-width="3" stroke-linecap="round"/>
+</svg>
